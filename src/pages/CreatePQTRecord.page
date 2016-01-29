@@ -1,0 +1,28 @@
+<apex:page controller="HTTPPostPQTUtility" showHeader="false" sidebar="false">
+    <html> 
+        <form id="pqtpost" action="https://primetherapeutics.quickbase.com/db/{!QBMappings.Table_ID__c}?a=GenNewRecord" method="post">                   
+            <input type="hidden" name="{!QBMappings.CaseNumber__c}" value="{!Case.CaseNumber}"/>
+            <input type="hidden" name="{!QBMappings.Member_Last_Name__c}" value="{!Case.Member_Last_Name__c}"/>
+            <input type="hidden" name="{!QBMappings.Member_First_Name__c}" value="{!Case.Member_First_Name__c}"/>
+            <input type="hidden" name="{!QBMappings.Member_ID__c}" value="{!Case.Member_ID__c}"/>           
+            <input type="hidden" name="{!QBMappings.Member_Plan_Lookup_r_Name__c}" value="{!Case.Member_Plan_Lookup__r.Name}"/>
+            <input type="hidden" name="{!QBMappings.Business_Group_Channel__c}" value="{!Case.Business_Group_Channel__c}"/>
+            <input type="hidden" name="{!QBMappings.Request_Type__c}" value="{!Case.Request_Type_Lookup__r.Long_Text_Name__c}"/>
+            <input type="hidden" name="{!QBMappings.Subcategory__c}" value="{!Case.Subcategory__c}"/>
+            <input type="hidden" name="{!QBMappings.Order__c}" value="{!Case.Order__c}"/>
+            <input type="hidden" name="{!QBMappings.Rx_Claim__c}" value="{!Case.Rx_Claim__c}"/>
+            <input type="hidden" name="{!QBMappings.Original_Request_Date_Time__c}" value="{!OrigDT}"/>
+            <input type="hidden" name="{!QBMappings.Contact_First_Name__c}" value="{!Case.Contact_First_Name__c}"/>
+            <input type="hidden" name="{!QBMappings.Contact_Last_Name__c}" value="{!Case.Contact_Last_Name__c}"/>
+            <input type="hidden" name="{!QBMappings.Contact_Phone__c}" value="{!Case.Contact_Phone__c}"/> 
+            <input type="hidden" name="{!QBMappings.Group_Number__c}" value="{!Case.Group_Number__c}"/>
+            <input type="hidden" name="{!QBMappings.isClosed__c}" value="{!Case.isClosed}"/>
+            <input type="hidden" name="{!QBMappings.LinkToCase__c}" value="{!CaseLink}"/>
+             
+           <!-- /apex/CaseRedirect?casenum={!Case.CaseNumber} -->
+        </form> 
+        <script>
+          document.forms["pqtpost"].submit();
+        </script> 
+    </html>
+</apex:page>

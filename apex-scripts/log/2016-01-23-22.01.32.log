@@ -1,0 +1,48 @@
+Execute Anonymous
+
+================================
+
+Datetime startDate = system.now();// Start date
+Datetime endDate = system.now().addHours(60);//End Date
+system.debug(startdate+'<<>>'+enddate);               
+integer intDays =  startDate.Date().daysBetween(endDate.Date());
+datetime sameDayEndDate = startDate.addDays(intDays);
+ system.debug(intDays+'<<33333>>'+sameDayEndDate);               
+decimal decHours = ((endDate.getTime())/1000/60/60) - ((sameDayEndDate.getTime())/1000/60/60);
+system.debug('>>>'+decHours);
+
+================================
+
+31.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,INFO;DB,INFO;VALIDATION,INFO;WORKFLOW,INFO
+Execute Anonymous: Datetime startDate = system.now();// Start date
+Execute Anonymous: Datetime endDate = system.now().addHours(60);//End Date
+Execute Anonymous: system.debug(startdate+'<<>>'+enddate);               
+Execute Anonymous: integer intDays =  startDate.Date().daysBetween(endDate.Date());
+Execute Anonymous: datetime sameDayEndDate = startDate.addDays(intDays);
+Execute Anonymous:  system.debug(intDays+'<<33333>>'+sameDayEndDate);               
+Execute Anonymous: decimal decHours = ((endDate.getTime())/1000/60/60) - ((sameDayEndDate.getTime())/1000/60/60);
+Execute Anonymous: system.debug('>>>'+decHours);
+22:01:32.10 (10188432)|EXECUTION_STARTED
+22:01:32.10 (10210509)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+22:01:32.10 (11066575)|USER_DEBUG|[3]|DEBUG|2016-01-24 04:01:32<<>>2016-01-26 16:01:32
+22:01:32.10 (11307152)|USER_DEBUG|[6]|DEBUG|3<<33333>>2016-01-27 04:01:32
+22:01:32.10 (11528117)|USER_DEBUG|[8]|DEBUG|>>>-12
+22:01:32.11 (11572675)|CUMULATIVE_LIMIT_USAGE
+22:01:32.11 (11572675)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+22:01:32.11 (11572675)|CUMULATIVE_LIMIT_USAGE_END
+
+22:01:32.10 (11643946)|CODE_UNIT_FINISHED|execute_anonymous_apex
+22:01:32.10 (13085000)|EXECUTION_FINISHED

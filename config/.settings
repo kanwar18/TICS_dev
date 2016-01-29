@@ -1,0 +1,19 @@
+{
+    "username": "sudheer.yalagala@primetherapeutics.com.dev", 
+    "environment": "sandbox", 
+    "project_name": "primeTics", 
+    "workspace": "/Users/kunwar/Documents/Sublime", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "SN1O4FD5NRXT3OLWIEGSZ8G16005OZWO", 
+    "metadata_container": "1dc290000000iiPAAQ", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "CustomObject", 
+        "Profile", 
+        "StaticResource"
+    ]
+}

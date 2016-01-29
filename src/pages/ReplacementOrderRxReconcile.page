@@ -1,0 +1,96 @@
+<apex:page standardController="Replacement_Order_Rx_Import__c" extensions="ReplacementOrderRxController" showheader="true" docType="html-5.0" readOnly="false" >
+<apex:includeScript value="{!URLFOR($Resource.JSCalendar,'calendar.js')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.JSCalendar,'calendar_blue.css')}" />
+
+  <apex:pageBlock title="Replacement Order Rx Imports">
+    
+    <apex:form >
+      <b>Filter:</b>
+      <apex:selectList value="{!selectedFilterOption}" size="1" rendered="true" >
+        <apex:selectOptions value="{!filterOptions}"/>
+      </apex:selectList>&nbsp;&nbsp;&nbsp;&nbsp;
+      <b>From Date:</b><apex:inputText id="fromdate" size="10" value="{!fromDate}" onmouseover="initialiseCalendar(this, '{!$Component.fromdate}')"/>&nbsp;&nbsp;&nbsp;&nbsp;
+      <b>To Date:</b><apex:inputText id="todate" size="10" value="{!toDate}" onmouseover="initialiseCalendar(this, '{!$Component.todate}')"/>&nbsp;&nbsp;&nbsp;&nbsp;
+      
+       <apex:commandButton action="{!refreshList}" value="Go" id="goButton" reRender="tblsection, pgbsection, thePBS" title="Click here to get the filtered records."/>&nbsp;&nbsp;
+      <apex:commandButton action="{!reconcileRxImports}" value="Reconcile" id="reconcileButton" />
+      
+      
+      <apex:pageblockSection columns="1" id="thePBS">
+      
+        <apex:outputText style="font-style:italic" value="No Records Found" rendered="{!pageNumber == 0 && NOT(hasError)}"/>
+        <apex:pageMessages id="msgs" rendered="{!hasError}"/>
+      </apex:pageblockSection>
+    <apex:pageblockSection columns="1" id="tblsection" >
+        <apex:pageblocksectionItem rendered="{!pageNumber > 0}">
+            <apex:actionRegion immediate="true">
+                <apex:pageBlockTable id="table" value="{!records}" var="record" rendered="{!NOT hasError}">
+                      <apex:column value="{!record.Replacement_Order_Number__c}"/>
+                      <apex:column value="{!record.Replacement_Order_Case_Found__c}"/>
+                      <apex:column value="{!record.Drug_Name__c}"/>
+                      <apex:column value="{!record.Quantity__c}" />
+                      <apex:column value="{!record.Member_Name__c}"/>
+                      <apex:column value="{!record.Closed_Date__c}"/>
+                      <apex:column value="{!record.Cost__c}"/>
+                      <apex:column value="{!record.Operator__c}"/>
+                      <apex:column value="{!record.Tax__c}"/> 
+                      <apex:column value="{!record.Price__c}"/>
+                      <apex:column value="{!record.CreatedDate}"/>
+                </apex:pageBlockTable>
+            </apex:actionRegion>
+        </apex:pageblocksectionItem>
+        <apex:pageblocksectionItem id="pgbsection" rendered="{!pageNumber > 0}"> 
+                <apex:outputPanel id="pgbButtons" rendered="{!NOT hasError}">
+                    <apex:outputLabel value="{!pageNumber}-{!totalPages} of {!totalPages}" style="float:left !important;"/>
+                    <center>
+                        <apex:panelGrid columns="8">
+                            <apex:commandLink value="◄◄" action="{!first}" rendered="{!IF(pageNumber == 1, false, true)}" reRender="tblsection" style="margin: 0 5px 0 0;text-decoration:none;"/>
+                            <apex:outputLabel value="◄◄" rendered="{!IF(pageNumber != 1, false, true)}" style="margin: 0 10px 0 0;color:#A8A8A8"/>
+                            <apex:commandLink value="◄ Previous" rendered="{! hasPrevious}" action="{!previous}" reRender="tblsection" style="margin: 0 5px 0 0;text-decoration:none;"/>
+                            <apex:outputLabel value="◄ Previous" rendered="{! NOT(hasPrevious)}" style="margin: 0 10px 0 0;color:#A8A8A8"/>
+                            <apex:commandLink value="Next ►" action="{!Next}" rendered="{! hasNext}" reRender="tblsection" style="margin: 0 5px 0 0;text-decoration:none;"/>
+                            <apex:outputLabel value="Next ►" rendered="{! NOT(hasNext)}" style="margin: 0 10px 0 0;color:#A8A8A8"/>
+                            <apex:commandLink value="►►" action="{!last}" rendered="{!IF(pageNumber < totalPages, true, false)}" reRender="tblsection" style="margin: 0 5px 0 0;text-decoration:none;"/>
+                            <apex:outputLabel value="►►" rendered="{!IF(pageNumber >= totalPages, true, false)}" style="margin: 0 10px 0 0;color:#A8A8A8"/>
+                        </apex:panelGrid>
+                    </center>
+                    <!-- <apex:outputLabel value="Page {!pageNumber} of {!totalPages}" style="text-align: right;"/> -->
+                </apex:outputPanel>
+                
+             </apex:pageblocksectionItem>
+             
+             
+         </apex:pageblockSection>
+         </apex:form>
+  </apex:pageBlock> 
+<script>
+    function fnSetDateFormat(oDateFormat)
+    {
+         oDateFormat['FullYear'];  //Example = 2007
+         oDateFormat['Year'];   //Example = 07
+         oDateFormat['FullMonthName']; //Example = January
+         oDateFormat['MonthName'];  //Example = Jan
+         oDateFormat['Month'];   //Example = 01
+         oDateFormat['Date'];   //Example = 01
+         oDateFormat['FullDay'];   //Example = Sunday
+         oDateFormat['Day'];    //Example = Sun
+         oDateFormat['Hours'];   //Example = 01
+         oDateFormat['Minutes'];   //Example = 01
+         oDateFormat['Seconds'];   //Example = 01
+          
+         var sDateString;
+          
+         // Use mm/dd/yyyy format
+         sDateString = oDateFormat['Month']+"/"+oDateFormat['Date']+"/"+oDateFormat['FullYear'];
+         //alert(sDateString );
+         return sDateString;
+    }
+       
+         
+    function initialiseCalendar(obj, eleId)
+    {
+         var element=document.getElementById(eleId);
+         fnInitCalendar(obj, eleId,'close=true');
+    }
+ </script>  
+</apex:page>

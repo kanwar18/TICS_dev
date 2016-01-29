@@ -1,0 +1,17 @@
+<apex:page standardController="Rx__c" extensions="RXCreateRecordWithSameDocController" 
+  action="{!cloneRecord}" showHeader="false" sidebar="false">
+  <apex:pageMessages />
+  <apex:form >
+    <apex:inputHidden value="{!Rx__c.Related_Case__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescribers_Name__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_s_DEA__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_s_NPI__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescribers_Phone__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescribers_Fax__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_Address1__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_Address2__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_City__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_State__c}"/>
+    <apex:inputHidden value="{!Rx__c.Prescriber_ZIP__c}"/>
+  </apex:form>
+</apex:page>

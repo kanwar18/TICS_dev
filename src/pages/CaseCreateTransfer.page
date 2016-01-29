@@ -1,0 +1,212 @@
+<apex:page standardController="Case" extensions="CaseCreateTransferController" showHeader="true" sidebar="true"> 
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/js/jquery-1.5.1.min.js')}"/>
+    <script type="text/javascript">  
+    $j = jQuery.noConflict(); 
+    $j(document).ready(function tabElements(){
+      $j('*[id*=tabIndex]').each(function(index) {
+        var pos = this.getAttribute('id').indexOf('tabIndex');
+        this.setAttribute('tabIndex', this.getAttribute('id').slice(pos+8));
+       });
+    });  
+
+    </script>
+
+    <apex:sectionHeader title="{!$ObjectType.Case.label} Edit" subtitle="New {!$ObjectType.Case.name}"/>
+    <apex:form >
+    <apex:pageMessages />
+    <apex:pageBlock title="{!$ObjectType.Case.label} Edit" mode="edit">
+        <apex:pageBlockButtons location="both">
+                        <apex:commandButton action="{!saveAll}" value="Save"/>
+                        <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection showHeader="true" title="Prime Assignment" columns="2">
+          <!--  <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Case Owner"/>
+                <apex:outputText value="{!Case.Owner.Name}"/> 
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Case Record Type"/>
+                <apex:outputText value="{!Case.RecordType.Name}"/>
+            </apex:pageBlockSectionItem>-->
+            <apex:inputField required="true" value="{!Case.Status}" id="tabIndex1"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Pharmacy Information" columns="2">
+            <apex:inputField value="{!Case.Pharmacy__c}" id="tabIndex2"/>
+            <apex:inputField value="{!Case.Source__c}" id="tabIndex8"/>
+            <apex:inputField value="{!Case.Other_Pharmacy_Name_Store__c}" id="tabIndex3"/>
+            <apex:pageBlockSectionItem />
+           <!-- <apex:inputField value="{!Case.DEA__c}" id="tabIndex4"/> --->
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.NPI__c}" id="tabIndex5"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Transferring_Pharmacist__c}" id="tabIndex6"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Member_reside_or_phys_Practice_in_NC__c}" id="tabIndex7"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Pharmacy Address" columns="2">
+            <apex:inputField value="{!Case.Pharmacy_Address_1__c}" id="tabIndex9"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Pharmacy_Address_2__c}" id="tabIndex10"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Pharmacy_City__c}" id="tabIndex11"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Pharmacy_State__c}" id="tabIndex12"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField value="{!Case.Pharmacy_ZIP__c}" id="tabIndex13"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Member Information" columns="2">
+            <apex:inputField required="true" value="{!Case.Member_ID__c}" id="tabIndex14"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField required="true" value="{!Case.Member_First_Name__c}" id="tabIndex15"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField required="true" value="{!Case.Member_Last_Name__c}" id="tabIndex16"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField required="true" value="{!Case.Member_Plan_Lookup__c}" Id="tabIndex17"/>
+            <apex:inputField value="{!Case.Group_Number__c}" id="tabIndex19"/>
+            <apex:pageBlockSectionItem />
+            <apex:inputField required="true" value="{!Case.Contact_Phone__c}" id="tabIndex20"/>
+            <apex:inputField value="{!Case.Alternate_Phone__c}" id="tabIndex18"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Member Address" columns="2">
+            <apex:inputField value="{!Case.Shipping_is_Same__c}" id="tabIndex21"/>
+            <apex:inputField required="true" value="{!Case.Other_Address_1__c}" id="tabIndex27"/>
+            <apex:inputField value="{!Case.Shipping_Address_1__c}" id="tabIndex22"/>
+            <apex:inputField value="{!Case.Other_Address_2__c}" id="tabIndex28"/>
+            <apex:inputField value="{!Case.Shipping_Address_2__c}" id="tabIndex23"/>
+            <apex:inputField required="true" value="{!Case.Other_City__c}" id="tabIndex29"/>
+            <apex:inputField value="{!Case.Shipping_City__c}" id="tabIndex24"/>
+            <apex:inputField required="true" value="{!Case.Other_State__c}" id="tabIndex30"/>
+            <apex:inputField value="{!Case.Shipping_State__c}" id="tabIndex25"/>
+            <apex:inputField required="true" value="{!Case.Other_ZIP__c}" id="tabIndex31"/>
+            <apex:inputField value="{!Case.Shipping_ZIP__c}" id="tabIndex26"/>
+            <apex:pageBlockSectionItem />
+            <apex:pageBlockSectionItem />
+            <apex:inputField required="true" value="{!Case.Shipping_Method__c}" id="tabIndex32"/>
+            <apex:pageBlockSectionItem />
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Payment Information" columns="1">
+            <apex:inputField value="{!Case.Payment_Information__c}" id="tabIndex33"/>
+            <apex:inputField value="{!Case.Last_4_Digits_CC__c}" id="tabIndex34"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Rx Notes" columns="1">
+            <apex:inputField value="{!Case.Other_Member_Notes__c}" id="tabIndex35" style="width:95%;"/>
+            <apex:inputField value="{!Case.Attention_PrimeMail_Notes__c}" id="tabIndex36" style="width:95%;"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Patient Information" columns="2">
+            <apex:inputField value="{!Case.Patient_Name_Same_as_Member__c}" id="tabIndex37"/>
+            <apex:inputField required="true" value="{!Case.DOB__c}" id="tabIndex40"/>
+            <apex:inputField value="{!Case.Patient_First_Name__c}" id="tabIndex38"/>
+            <apex:inputField value="{!Case.Does_patient_have_any_allergies_or_he__c}" id="tabIndex41"/>
+            <apex:inputField value="{!Case.Patient_Last_Name__c}" id="tabIndex39"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Notes" columns="1">
+            <apex:inputField value="{!Case.Information_Description_to_Add__c}" id="tabIndex42" style="width:95%;"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection showHeader="true" title="Resolution" columns="1">
+            <apex:inputField value="{!Case.Resolution__c}" id="tabIndex43"/>
+            <apex:inputField value="{!Case.Resolution_Subgroup__c}" id="tabIndex44"/>
+            <apex:inputField value="{!Case.Resolution_Date_Time__c}" id="tabIndex45"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageblock title="RXs" mode="Edit" id="RXAdd">
+            <apex:repeat value="{!objRXRows.mapRXs}" var="key">
+              <apex:pageblockSection showHeader="true" title="Drug {!key+1} Information">
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Drug_Name__c}" id="tabIndex46"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].RX__c}" id="tabIndex53"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Quantity__c}" id="tabIndex47"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Cost__c}" id="tabIndex54"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Controlled_Drug_TF__c}" id="tabIndex48"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Patient_DAW__c}" id="tabIndex55"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Drug_Manufacturer__c}" id="tabIndex49"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Prescriber_DAW__c}" id="tabIndex56"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Strength__c}" id="tabIndex50"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Include_in_RTMB__c}" id="tabIndex57"/>            
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Directions__c}" id="tabIndex51"/> 
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Unable_to_Transfer__c}" id="tabIndex58"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Profile_RX__c}" id="tabIndex52"/>
+              </apex:pageblockSection> 
+              <apex:pageblockSection showHeader="true" title="Refill Information">
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Days_Supply__c}" id="tabIndex59"/>
+                <apex:pageBlockSectionItem />
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Quantity_Remaining__c}" id="tabIndex60"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Written_Date__c}" id="tabIndex64"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Original_of_Refills__c}" id="tabIndex61"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].First_Filled_Date__c}" id="tabIndex65"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Remaining_of_Refills__c}" id="tabIndex62"/>
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Last_Date_Filled__c}" id="tabIndex66"/>
+                <apex:pageBlockSectionItem />
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Expected_Date_of_Fill__c}" id="tabIndex63"/>
+              </apex:pageblockSection>  
+              <apex:pageblockSection showHeader="true" title="Prescriber Information">
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_First_Name__c}" Id="PrescriberFirstNametabIndex67"
+                  onblur="AssignLatestFirstName((document.getElementById('{!$Component.PrescriberFirstNametabIndex67}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_Address1__c}" Id="PrescriberAddr1tabIndex73"
+                   onblur="AssignLatestAddr1((document.getElementById('{!$Component.PrescriberAddr1tabIndex73}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_Last_Name__c}" Id="PrescriberLastNametabIndex68"
+                   onblur="AssignLatestLastName((document.getElementById('{!$Component.PrescriberLastNametabIndex68}')).value)" />
+                <apex:inputField required="false" value="{!objRXRows.mapRXs[key].Prescriber_Address2__c}" Id="PrescriberAddr2tabIndex74"
+                   onblur="AssignLatestAddr2((document.getElementById('{!$Component.PrescriberAddr2tabIndex74}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_s_NPI__c}" Id="PrescriberNPItabIndex69"
+                   onblur="AssignLatestNPI((document.getElementById('{!$Component.PrescriberNPItabIndex69}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_City__c}" Id="PrescriberCitytabIndex75"
+                   onblur="AssignLatestCity((document.getElementById('{!$Component.PrescriberCitytabIndex75}')).value)" /> 
+               <!-- <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_s_DEA__c}" Id="PrescriberDEAtabIndex70"
+                   onblur="AssignLatestDEA((document.getElementById('{!$Component.PrescriberDEAtabIndex70}')).value)" /> -->
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_State__c}" Id="PrescriberStatetabIndex76"
+                   onblur="AssignLatestState((document.getElementById('{!$Component.PrescriberStatetabIndex76}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescribers_Phone__c}" Id="PrescriberPhonetabIndex71"
+                   onblur="AssignLatestPhone((document.getElementById('{!$Component.PrescriberPhonetabIndex71}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescriber_Zip__c}" Id="PrescriberZiptabIndex77"
+                   onblur="AssignLatestZip((document.getElementById('{!$Component.PrescriberZiptabIndex77}')).value)" />
+                <apex:inputField required="true" value="{!objRXRows.mapRXs[key].Prescribers_Fax__c}" Id="PrescriberFaxtabIndex72"
+                   onblur="AssignLatestFax((document.getElementById('{!$Component.PrescriberFaxtabIndex72}')).value)" />
+              </apex:pageblockSection> 
+                <apex:commandLink value="Remove RX" action="{!objRXRows.RemoveRow}" 
+                    rendered="{!!(objRXRows.intNumberOfRXs==1)}" rerender="RXAdd" immediate="true" >
+                    <apex:param name="RowToRemove" value="{!key}"/>
+                </apex:commandLink>
+            </apex:repeat>     
+            <br/><br/>
+            <apex:commandLink value="Add RX and Copy Prevoius Prescriber" action="{!objRXRows.AddRowWithDoc}" reRender="RXAdd" immediate="true" id="tabIndex78">
+            </apex:commandLink>
+            <br/><br/>
+            <apex:commandLink value="Add RX" action="{!objRXRows.AddRow}" reRender="RXAdd" immediate="true" id="tabIndex79"/>             
+        </apex:pageBlock>
+        <apex:actionFunction name="AssignLatestFirstName" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestFirstName"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestAddr1" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestAddr1"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestLastName" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestLastName"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestAddr2" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestAddr2"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestNPI" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestNPI"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestCity" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestCity"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestDEA" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestDEA"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestState" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestState"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestPhone" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestPhone"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestZip" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestZip"/>
+        </apex:actionFunction>
+        <apex:actionFunction name="AssignLatestFax" action="{!objRXRows.updateLatestValues}" immediate="true" rerender="">
+          <apex:param value="" name="LatestFax"/>
+        </apex:actionFunction>        
+    </apex:form>
+</apex:page>

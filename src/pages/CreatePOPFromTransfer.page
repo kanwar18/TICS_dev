@@ -1,0 +1,10 @@
+<apex:page standardController="Rx__c" extensions="CaseCreatePOPFromTransferController" 
+    action="{!createData}" recordsetVar="selectedRXs" showHeader="false" sidebar="false">
+    <apex:form >
+    <apex:repeat value="{!selectedRXs}" var="rx">
+      <apex:inputHidden value="{!rx.Related_Case__c}"/>
+      <apex:inputHidden value="{!rx.Created_POP__c}"/>
+    </apex:repeat>
+    </apex:form>
+  <apex:pageMessages />
+</apex:page>

@@ -1,0 +1,42 @@
+Execute Anonymous
+
+================================
+
+case c = [select id, createddate from case limit 1];
+CaseUtility.isOutsideHours2(c.createddate.time());
+
+================================
+
+31.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,INFO;DB,INFO;VALIDATION,INFO;WORKFLOW,INFO
+Execute Anonymous: case c = [select id, createddate from case limit 1];
+Execute Anonymous: CaseUtility.isOutsideHours2(c.createddate.time());
+23:31:00.133 (133765441)|EXECUTION_STARTED
+23:31:00.133 (133776521)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+23:31:00.134 (134553141)|SOQL_EXECUTE_BEGIN|[1]|Aggregations:0|SELECT id, createddate FROM case LIMIT 1
+23:31:00.169 (169205200)|SOQL_EXECUTE_END|[1]|Rows:1
+23:31:00.187 (187209416)|METHOD_ENTRY|[1]|01pi00000054ydw|CaseUtility.CaseUtility()
+23:31:00.188 (188050152)|METHOD_EXIT|[1]|CaseUtility
+23:31:00.188 (188108462)|METHOD_ENTRY|[2]|01pi00000054ydw|CaseUtility.isOutsideHours2(Time)
+23:31:00.188 (188715002)|USER_DEBUG|[1225]|DEBUG|23:00:00.020Z--------01:00:00.020Z
+23:31:00.188 (188780528)|USER_DEBUG|[1227]|DEBUG|>>>14:44:05.000Z
+23:31:00.188 (188862664)|USER_DEBUG|[1233]|DEBUG|outside working hours
+23:31:00.188 (188969897)|METHOD_EXIT|[2]|01pi00000054ydw|CaseUtility.isOutsideHours2(Time)
+23:31:00.189 (189027656)|CUMULATIVE_LIMIT_USAGE
+23:31:00.189 (189027656)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+23:31:00.189 (189027656)|CUMULATIVE_LIMIT_USAGE_END
+
+23:31:00.189 (189072216)|CODE_UNIT_FINISHED|execute_anonymous_apex
+23:31:00.190 (190985796)|EXECUTION_FINISHED

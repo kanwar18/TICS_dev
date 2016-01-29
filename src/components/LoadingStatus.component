@@ -1,0 +1,46 @@
+<apex:component >
+
+<apex:attribute name="Message"
+    type="String"
+    description="Messaging show in loading status spinner"
+    default="Loading..."/>
+
+<apex:actionStatus id="LoadingStatus">
+     <apex:facet name="start">
+          <div id="loadingDiv" class="loadingDiv" >
+               <span id="loadingHolder" class="loadingHolder">
+                    <img class="loadingImage" src="/img/loading.gif" title="Please Wait..." alt="Loading..."/>
+                    <span class="loadingDescription">{!message}</span>
+               </span>
+          </div>
+     </apex:facet>
+</apex:actionStatus>
+
+<style>
+.loadingImage { vertical-align:bottom; }.loadingDescription { padding:0 1.5em 0 0.5em; }
+.loadingHolder {
+     background-color: #FFFFCC;
+     border: 1px solid #333333;
+     font-size: 1.2em;
+     font-weight: bold;
+     padding: 0.5em;
+     position: relative;
+     top: 45%;
+     white-space: nowrap;
+}
+.loadingDiv {
+     background-color: lightgrey;
+     opacity: .75;
+     filter: alpha(opacity=75); /* IE's opacity*/
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     z-index: 300;
+     top: 0;
+     left: 0;
+}    
+
+</style>
+
+</apex:component>

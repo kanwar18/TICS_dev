@@ -1,0 +1,22 @@
+<apex:page standardController="Case" extensions="CaseNewButtonOverrideController" showHeader="true" sidebar="true">
+  <apex:form >
+  <apex:pageBlock >
+      <apex:pageBlockButtons location="bottom">
+        <apex:commandButton value="Continue" action="{!redirectToPage}" />
+        <apex:commandButton value="Cancel" action="{!cancel}" />  
+      </apex:pageBlockButtons>
+    <apex:pageMessages />
+       
+    <apex:pageBlockSection id="selectedRecordType" columns="1">
+      <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Choose Record Type" for="rt" />         
+         <apex:panelGrid columns="2">
+           <apex:selectList value="{!RecordType}" multiselect="false"  size="1">
+             <apex:selectOptions value="{!rectypes}"/>
+           </apex:selectList>              
+         </apex:panelGrid>       
+      </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>	
+</apex:page>

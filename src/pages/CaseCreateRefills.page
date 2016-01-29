@@ -1,0 +1,135 @@
+<apex:page standardController="Case" extensions="CaseCreateRefillsController" showHeader="true" sidebar="true">
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/js/jquery-1.5.1.min.js')}"/>
+    <script type="text/javascript">  
+    $j = jQuery.noConflict(); 
+    $j(document).ready(function tabElements(){
+      $j('*[id*=tabIndex]').each(function(index) {
+        var pos = this.getAttribute('id').indexOf('tabIndex');
+        var idx = this.getAttribute('id').slice(pos+8);
+        if(idx == '1'){
+          document.getElementById(this.getAttribute('id')).focus();  
+        }
+        this.setAttribute('tabIndex', this.getAttribute('id').slice(pos+8));
+       });
+    });  
+function buttonDisable() {
+    document.getElementById("loadingDiv").style.display="block";
+    setTimeout(buttonEnable, 4000);
+}
+function buttonEnable() {
+    document.getElementById("loadingDiv").style.display="none";
+}
+    </script>
+
+  <apex:sectionHeader title="{!$ObjectType.Case.label} Edit" subtitle="New {!$ObjectType.Case.name}"/>
+    <apex:form id="dd">
+    <apex:pageMessages id="msgs" escape="false"></apex:pageMessages>
+    <!-- onclick="javascript:buttonDisable();" -->
+      <apex:pageBlock title="{!$ObjectType.Case.label} Edit" mode="edit">
+                <apex:pageBlockButtons location="both" id="pbb1">
+                        <apex:commandButton action="{!saveAll}" value="Save"  onclick="javascript:buttonDisable();"/>
+                        <apex:commandButton action="{!cancel}" value="Cancel"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection showHeader="true" title="Order Refill" columns="2">
+                        <apex:pageBlockSectionItem >
+                          <apex:outputLabel value="Case Owner"/>
+                          <apex:outputText value="{!$User.FirstName} {!$User.LastName}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                          <apex:inputField id="tabIndex1" required="true" value="{!Case.Status}"/>
+                        </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection showHeader="true" title="Refill Information" columns="1">
+                        <apex:inputField id="tabIndex99" value="{!Case.Rx_Information_Instructions__c}" style="width:95%;"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection showHeader="true" title="Member Information" columns="2">
+                        <apex:inputField id="tabIndex12" required="true" value="{!Case.Member_ID__c}"/>
+                        <apex:inputField id="tabIndex15" required="true" value="{!Case.Contact_Phone__c}"/>
+                        <apex:inputField id="tabIndex13" required="true" value="{!Case.Member_First_Name__c}"/>
+                        <apex:inputField id="tabIndex16" value="{!Case.Contact_Phone_Type__c}"/>
+                        <apex:inputField id="tabIndex14" required="true" value="{!Case.Member_Last_Name__c}"/>
+                        <apex:inputField id="tabIndex17" value="{!Case.Alternate_Phone__c}"/>
+                        <apex:pageBlockSectionItem />
+                        <apex:inputField id="tabIndex18" value="{!Case.Alt_Phone_Type__c}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection showHeader="true" title="Payment and Shipping Method" columns="2" dir="String">
+                        <apex:outputField value="{!Case.Permanent_CC_Change_Alert__c}"/>
+                        <apex:inputField id="tabIndex25" required="true" value="{!Case.Shipping_Address_1__c}"/>
+                        <apex:inputField id="tabIndex19" value="{!Case.Permanent_CC_Change__c}"/>
+                        <apex:inputField id="tabIndex26" value="{!Case.Shipping_Address_2__c}"/>
+                        <apex:outputField value="{!Case.Temporary_CC_Change_Alert__c}"/>
+                        <apex:inputField id="tabIndex27" required="true" value="{!Case.Shipping_City__c}"/>
+                        <apex:inputField id="tabIndex20" value="{!Case.Temporary_CC_Change__c}"/>
+                        <apex:inputField id="tabIndex28" required="true" value="{!Case.Shipping_State__c}"/> 
+                        <apex:outputField value="{!Case.Credit_Card_Instructions__c}"/>
+                        <apex:inputField id="tabIndex29" required="true" value="{!Case.Shipping_ZIP__c}"/>
+                        <apex:inputField id="tabIndex21" value="{!Case.Last_4_Digits_CC__c}"/>
+                        <apex:inputField id="tabIndex30" required="true" value="{!Case.Shipping_Method__c}"/> 
+                        <apex:inputField id="tabIndex22" value="{!Case.Credit_Card_Type__c}"/>
+                        <apex:inputField id="tabIndex31" value="{!Case.No_Charge_for_Shipping__c}"/>  
+                        <apex:inputField id="tabIndex23" value="{!Case.Name_on_Credit_Card__c}"/>
+                        <apex:inputField id="tabIndex32" value="{!Case.No_Charge_for_Shipping_Reason__c}"/>
+                        <apex:inputField id="tabIndex24" value="{!Case.Credit_Card_Expiration_Date__c}"/> 
+                </apex:pageBlockSection>
+                <apex:pageBlockSection showHeader="true" title="Rx Details" columns="1">
+                        <apex:inputField id="tabIndex33" value="{!Case.Refill_Instructions__c}" style="width:95%;"/> 
+                        <apex:inputField id="tabIndex34" value="{!Case.Other_Member_Notes__c}" style="width:95%;"/> 
+                </apex:pageBlockSection>
+          <apex:pageblockSection showHeader="true" title="Add RXs">
+            <apex:pageBlockTable value="{!objRefillRows.mapRXs}" var="key" id="refillAdd">
+                <apex:column headerValue="Rx #">
+                    <apex:inputField id="tabIndex35" required="true" value="{!objRefillRows.mapRXs[key].Rx__c}"/>
+                </apex:column>                
+                <apex:column headerValue="Patient Name">
+                    <apex:inputField id="tabIndex36" required="true" value="{!objRefillRows.mapRXs[key].Patient_Name__c}"/>
+                </apex:column>
+                <apex:column headerValue="Drug Name">
+                    <apex:inputField id="tabIndex37" required="true" value="{!objRefillRows.mapRXs[key].Drug_Name__c}"/>
+                </apex:column>
+                <apex:column headerValue="Strength">
+                    <apex:inputField id="tabIndex38" required="false" value="{!objRefillRows.mapRXs[key].Strength__c}"/>
+                </apex:column>
+                <apex:column >
+                  <apex:commandLink value="Remove Row" action="{!objRefillRows.RemoveRow}" 
+                    rendered="{!!(objRefillRows.intNumberOfRefills==1)}" rerender="refillAdd" immediate="true">
+                    <apex:param name="RowToRemove" value="{!key}"/>
+                  </apex:commandLink>
+                </apex:column>
+            </apex:pageBlockTable> 
+           <br/><apex:commandLink id="tabIndex39" value="Add Row" action="{!objRefillRows.AddRow}" reRender="refillAdd" immediate="true"/>        
+        </apex:pageblockSection>        
+    </apex:pageBlock>
+  </apex:form>
+  <style>
+.loadingImage { vertical-align:bottom; }.loadingDescription { padding:0 1.5em 0 0.5em; }
+.loadingHolder {
+     background-color: #FFFFCC;
+     border: 1px solid #333333;
+     font-size: 1.2em;
+     font-weight: bold;
+     padding: 0.5em;
+     position: relative;
+     top: 45%;
+     white-space: nowrap;
+}
+.loadingDiv {
+     background-color: lightgrey;
+     opacity: .75;
+     filter: alpha(opacity=75); /* IE's opacity*/
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     z-index: 300;
+     top: 0;
+     left: 0;
+}    
+
+</style>
+<div id="loadingDiv" class="loadingDiv" style="display:none;">
+               <span id="loadingHolder" class="loadingHolder">
+                    <img class="loadingImage" src="/img/loading.gif" title="Please Wait..." alt="Loading..."/>
+                    <span class="loadingDescription">Processing..</span>
+               </span>
+</div>
+</apex:page>

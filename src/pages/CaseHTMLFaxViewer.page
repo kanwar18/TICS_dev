@@ -1,0 +1,6 @@
+<apex:page standardController="Case" showHeader="false" sidebar="false">
+ <script>
+  window.print()
+ </script>
+   <!-- <apex:outputText value="{!Case.Fax_Phoned_In_HTML_Image__c}" escape="false"/> -->
+</apex:page>

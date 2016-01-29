@@ -1,0 +1,43 @@
+Execute Anonymous
+
+================================
+
+Datetime startDate = system.now();// Start date
+Datetime endDate = system.now().addHours(60);//End Date
+                
+integer intDays =  startDate.Date().daysBetween(endDate.Date());
+datetime sameDayEndDate = startDate.addDays(intDays);
+                
+decimal decHours = ((endDate.getTime())/1000/60/60) - ((sameDayEndDate.getTime())/1000/60/60);
+
+================================
+
+31.0 APEX_CODE,DEBUG;APEX_PROFILING,DEBUG;CALLOUT,INFO;DB,INFO;VALIDATION,INFO;WORKFLOW,INFO
+Execute Anonymous: Datetime startDate = system.now();// Start date
+Execute Anonymous: Datetime endDate = system.now().addHours(60);//End Date
+Execute Anonymous:                 
+Execute Anonymous: integer intDays =  startDate.Date().daysBetween(endDate.Date());
+Execute Anonymous: datetime sameDayEndDate = startDate.addDays(intDays);
+Execute Anonymous:                 
+Execute Anonymous: decimal decHours = ((endDate.getTime())/1000/60/60) - ((sameDayEndDate.getTime())/1000/60/60);
+22:00:05.71 (71605313)|EXECUTION_STARTED
+22:00:05.71 (71627121)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+22:00:05.72 (72854695)|CUMULATIVE_LIMIT_USAGE
+22:00:05.72 (72854695)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+22:00:05.72 (72854695)|CUMULATIVE_LIMIT_USAGE_END
+
+22:00:05.71 (72929592)|CODE_UNIT_FINISHED|execute_anonymous_apex
+22:00:05.71 (74453760)|EXECUTION_FINISHED

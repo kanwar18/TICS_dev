@@ -1,0 +1,5406 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isInsertOnly", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isBeforeUpdate", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 3
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isBeforeInsert", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 4
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isSGC", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 5
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isCustomTrack", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 6
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "emailListCases", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 7
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "errorSet", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 8
+            }, 
+            "type": "Set"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "errorIdsSet", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 9
+            }, 
+            "type": "Set"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "listInsertComments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 10
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "listInsertCommentsSGC", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 11
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "setCaseIds", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 13
+            }, 
+            "type": "Set"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapOwnerNames", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 15
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapAssignedToPlanNames", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 17
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapAssignedToPrimeNames", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 19
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapAssignmentUpserts", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 21
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "listAssignmentInserts", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 46, 
+                "line": 23
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapPriorOwnerAssignments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 25
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapPriorQueueAssignments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 27
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapPriorPlanAssignments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 29
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "mapPriorPrimeAssignments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 31
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "OWNER_ASSIGNMENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 33
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "QUEUE_ASSIGNMENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 34
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "PRIME_ASSIGNMENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 35
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "PLAN_ASSIGNMENT_TYPE", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 36
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static", 
+                "final"
+            ], 
+            "name": "setReadOnlyQueues", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 37
+            }, 
+            "type": "Set"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "timeStamp", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 41
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "run", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 43
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "map_OwnerNames", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 341
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "map_QueueNames", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 342
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtItem", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtGrievance", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtTask", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtOrderRefill", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtServGesture", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtRepOrderAlone", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 69, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtRepOrderWithItem", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 85, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "rtNcqa", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 104, 
+                "line": 343
+            }, 
+            "type": "Id"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isResolutionTracked", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 488
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isStatusTracked", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 489
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public", 
+                "final"
+            ], 
+            "name": "BREAK_AT", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 2005
+            }, 
+            "type": "Integer"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "CaseUtility", 
+    "tableDeclaration": {
+        "type": "CaseUtility", 
+        "modifiers": [
+            "public", 
+            "without sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 30, 
+            "line": 1
+        }, 
+        "name": "CaseUtility"
+    }, 
+    "key": "01pi00000054ydwAAA", 
+    "variables": [
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 55
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 56
+            }, 
+            "name": "mapClosedCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 57
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 63
+            }, 
+            "name": "listOpenAssignments"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 65
+            }, 
+            "name": "thisOpenAssignment"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 77
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 79
+            }, 
+            "name": "caseIdMap"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 46, 
+                "line": 80
+            }, 
+            "name": "caseIdAssignmentHistoryMap"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 83
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 87
+            }, 
+            "name": "allAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 97
+            }, 
+            "name": "a"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 99
+            }, 
+            "name": "assignmentList"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 108
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 110
+            }, 
+            "name": "history"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 122
+            }, 
+            "name": "h"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 153
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 154
+            }, 
+            "name": "mapOldCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 156
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 161
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 162
+            }, 
+            "name": "OwnerAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 170
+            }, 
+            "name": "QueueAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 179
+            }, 
+            "name": "PrimeAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 188
+            }, 
+            "name": "PlanAssignmentHistory"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 200
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 209
+            }, 
+            "name": "OwnerAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 226
+            }, 
+            "name": "QueueAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 242
+            }, 
+            "name": "OwnerAssignmentHistory"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 258
+            }, 
+            "name": "OwnerAssignmentHistory"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 278
+            }, 
+            "name": "listCaseOwners"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 283
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Assignment_History__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 31, 
+                "line": 293
+            }, 
+            "name": "thisAssign"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 309
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 81, 
+                "line": 309
+            }, 
+            "name": "listoldcases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 310
+            }, 
+            "name": "rtMapByNameCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 314
+            }, 
+            "name": "ownersid"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 315
+            }, 
+            "name": "newcase"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 320
+            }, 
+            "name": "userlist"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 324
+            }, 
+            "name": "newcase"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 325
+            }, 
+            "name": "oldcase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 346
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 41, 
+                "line": 347
+            }, 
+            "name": "rtMapByNameCase"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 357
+            }, 
+            "name": "set_CaseOwnerIds"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 358
+            }, 
+            "name": "set_CaseQueueIds"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 360
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 362
+            }, 
+            "name": "caseOwnerId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 380
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 82, 
+                "line": 380
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 384
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 390
+            }, 
+            "name": "thisInformation"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 409
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 415
+            }, 
+            "name": "thisInfo"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 427
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 79, 
+                "line": 427
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 431
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 435
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 445
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 461
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 41, 
+                "line": 470
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 477
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 492
+            }, 
+            "name": "listcases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 81, 
+                "line": 492
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 493
+            }, 
+            "name": "trackedFields"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 494
+            }, 
+            "name": "statusvalue"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 494
+            }, 
+            "name": "resolutionvalue"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 495
+            }, 
+            "name": "fieldSet"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 497
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 506
+            }, 
+            "name": "thisField"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 508
+            }, 
+            "name": "NewCommentBody"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 511
+            }, 
+            "name": "FieldLabel"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 528
+            }, 
+            "name": "oldVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 36, 
+                "line": 529
+            }, 
+            "name": "newVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 546
+            }, 
+            "name": "oldVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 547
+            }, 
+            "name": "newVal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 683
+            }, 
+            "name": "listcases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 81, 
+                "line": 683
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 684
+            }, 
+            "name": "trackedFields"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 685
+            }, 
+            "name": "fieldSet"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 687
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 697
+            }, 
+            "name": "thisField"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 700
+            }, 
+            "name": "thisCommentBody"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 722
+            }, 
+            "name": "FieldLabel"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 724
+            }, 
+            "name": "oldVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 725
+            }, 
+            "name": "newVal"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 770
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 796
+            }, 
+            "name": "listcases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 78, 
+                "line": 796
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 797
+            }, 
+            "name": "trackedFields"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 798
+            }, 
+            "name": "fieldSet"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 800
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 827
+            }, 
+            "name": "thisField"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 830
+            }, 
+            "name": "thisCommentBody"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 835
+            }, 
+            "name": "FieldLabel"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 837
+            }, 
+            "name": "oldVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 838
+            }, 
+            "name": "newVal"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 41, 
+                "line": 884
+            }, 
+            "name": "thisCaseComment"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 904
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 905
+            }, 
+            "name": "ErrorMessage"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 906
+            }, 
+            "name": "setTaskStatuses"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 907
+            }, 
+            "name": "setTaskTypes"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 908
+            }, 
+            "name": "mapCaseIdWithDelegPlan"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 909
+            }, 
+            "name": "planIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 910
+            }, 
+            "name": "mapCasePlans"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 45, 
+                "line": 912
+            }, 
+            "name": "ValidationTypes"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 914
+            }, 
+            "name": "CaseIdsToValidate"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 916
+            }, 
+            "name": "validationName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 919
+            }, 
+            "name": "thisTaskStatus"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 926
+            }, 
+            "name": "thisTaskType"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 934
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 935
+            }, 
+            "name": "thisRecordType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 939
+            }, 
+            "name": "validationName"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 950
+            }, 
+            "name": "cs"
+        }, 
+        {
+            "type": "Task", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 957
+            }, 
+            "name": "thisTask"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 959
+            }, 
+            "name": "thisCaseRecordType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 961
+            }, 
+            "name": "thisCaseStatus"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 962
+            }, 
+            "name": "validationName"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 963
+            }, 
+            "name": "blnStautsOrCheckbox"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 970
+            }, 
+            "name": "thisChkbox"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 971
+            }, 
+            "name": "fieldName"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 69, 
+                "line": 1026
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1027
+            }, 
+            "name": "ErrorMessage"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1028
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 1038
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1039
+            }, 
+            "name": "setFaxNum"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1040
+            }, 
+            "name": "lstFaxRecToInsert"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1042
+            }, 
+            "name": "cFax"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1047
+            }, 
+            "name": "lstFaxRec"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1048
+            }, 
+            "name": "mapFaxRec"
+        }, 
+        {
+            "type": "Fax_Numbers__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 1053
+            }, 
+            "name": "fn"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1062
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "Fax_Numbers__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 1065
+            }, 
+            "name": "newFN"
+        }, 
+        {
+            "type": "Fax_Numbers__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 1075
+            }, 
+            "name": "newFN"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 1112
+            }, 
+            "name": "lstCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 79, 
+                "line": 1112
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1114
+            }, 
+            "name": "lstCasesToUpdate"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1115
+            }, 
+            "name": "setCreatedById"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1119
+            }, 
+            "name": "cs"
+        }, 
+        {
+            "type": "IntegrationUserID__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 1124
+            }, 
+            "name": "integrationUserID"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1125
+            }, 
+            "name": "intUId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1128
+            }, 
+            "name": "lstUserData"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1132
+            }, 
+            "name": "mapEmailAddress"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1134
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1138
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "Datetime", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1143
+            }, 
+            "name": "Original_Request_Date_Time"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1201
+            }, 
+            "name": "isAllowed"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1202
+            }, 
+            "name": "myTime1"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1203
+            }, 
+            "name": "mytime2"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1205
+            }, 
+            "name": "ct"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 1220
+            }, 
+            "name": "newList"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 71, 
+                "line": 1220
+            }, 
+            "name": "oldMap"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1221
+            }, 
+            "name": "SysAdminProfileId"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1222
+            }, 
+            "name": "isRestricted"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1223
+            }, 
+            "name": "myTime1"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1224
+            }, 
+            "name": "mytime2"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1225
+            }, 
+            "name": "mytime3"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1226
+            }, 
+            "name": "mytime4"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1227
+            }, 
+            "name": "mytime5"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1228
+            }, 
+            "name": "mytime6"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1230
+            }, 
+            "name": "cs"
+        }, 
+        {
+            "type": "Time", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1232
+            }, 
+            "name": "ct"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1233
+            }, 
+            "name": "strRecordTypeName"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 1249
+            }, 
+            "name": "lstCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 74, 
+                "line": 1249
+            }, 
+            "name": "strOperation"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1253
+            }, 
+            "name": "listReferencedRequestTypes"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1255
+            }, 
+            "name": "setRequestTypes"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 1256
+            }, 
+            "name": "mapRequestTypesByName"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 1258
+            }, 
+            "name": "setMissingRequestTypes"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1260
+            }, 
+            "name": "listNewRequestTypes"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1262
+            }, 
+            "name": "planIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1263
+            }, 
+            "name": "map_Plan"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1264
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Request_Type__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 1274
+            }, 
+            "name": "thisRequestType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1283
+            }, 
+            "name": "thisRequestTypeText"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1289
+            }, 
+            "name": "thisRequestTypeText"
+        }, 
+        {
+            "type": "Request_Type__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1290
+            }, 
+            "name": "newRequestType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1309
+            }, 
+            "name": "profileId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 1310
+            }, 
+            "name": "myProfile"
+        }, 
+        {
+            "type": "Plan__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1315
+            }, 
+            "name": "oPlan"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1320
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1371
+            }, 
+            "name": "recipients"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 47, 
+                "line": 1372
+            }, 
+            "name": "recipientsList"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 1376
+            }, 
+            "name": "allEmails"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1377
+            }, 
+            "name": "listContacts"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1378
+            }, 
+            "name": "toAddresses"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 1384
+            }, 
+            "name": "emailTemplates"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1385
+            }, 
+            "name": "listUsers"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1392
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 1395
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "SingleEmailMessage", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 1396
+            }, 
+            "name": "mail"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 1422
+            }, 
+            "name": "EmailRecipient"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1423
+            }, 
+            "name": "Con"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1424
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1425
+            }, 
+            "name": "tempContact"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 1433
+            }, 
+            "name": "DelCon"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 63, 
+                "line": 1438
+            }, 
+            "name": "setMissingRequestTypes"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1439
+            }, 
+            "name": "listUsers"
+        }, 
+        {
+            "type": "SingleEmailMessage", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 1442
+            }, 
+            "name": "ErrorEmail"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1445
+            }, 
+            "name": "strErrorMessage"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1448
+            }, 
+            "name": "thisReqeustType"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1451
+            }, 
+            "name": "listToAddrs"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1452
+            }, 
+            "name": "thisUser"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 61, 
+                "line": 1579
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1580
+            }, 
+            "name": "CaseIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 1581
+            }, 
+            "name": "mapCasePlan"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 1582
+            }, 
+            "name": "mapCasePlanParent"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1583
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1587
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1602
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 1616
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 76, 
+                "line": 1616
+            }, 
+            "name": "strOperation"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1618
+            }, 
+            "name": "integratedCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1619
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 1629
+            }, 
+            "name": "casesToProcess"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1631
+            }, 
+            "name": "lstCasesToUpdate"
+        }, 
+        {
+            "type": "IntegrationUserID__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1634
+            }, 
+            "name": "integrationUserID"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 1635
+            }, 
+            "name": "intUId"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1638
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1644
+            }, 
+            "name": "caseToUpdate"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1649
+            }, 
+            "name": "caseToUpdate"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 58, 
+                "line": 1664
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 83, 
+                "line": 1664
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1670
+            }, 
+            "name": "insertCaseShare"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 1671
+            }, 
+            "name": "mapPlanSharingRuleIncludes"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 50, 
+                "line": 1673
+            }, 
+            "name": "mapPlanSharingRuleExcludes"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1675
+            }, 
+            "name": "setIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 1677
+            }, 
+            "name": "mapPlanSharingRules"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1679
+            }, 
+            "name": "thisRule"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 1684
+            }, 
+            "name": "newRules"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 43, 
+                "line": 1692
+            }, 
+            "name": "newRules"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 1699
+            }, 
+            "name": "mapCaseIdToRoleNames"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1700
+            }, 
+            "name": "mapCaseIsHistorical"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 1701
+            }, 
+            "name": "setRoleNames"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1702
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1704
+            }, 
+            "name": "strRecordTypeName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1709
+            }, 
+            "name": "thisPlanContains"
+        }, 
+        {
+            "type": "PlanUserSharingRules__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 45, 
+                "line": 1712
+            }, 
+            "name": "thisSharingRule"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 1721
+            }, 
+            "name": "newRoleNames"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 1734
+            }, 
+            "name": "newRoleNames"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1745
+            }, 
+            "name": "thisPlanContains"
+        }, 
+        {
+            "type": "PlanUserSharingRules__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 45, 
+                "line": 1748
+            }, 
+            "name": "thisSharingRule"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 44, 
+                "line": 1757
+            }, 
+            "name": "newRoleNames"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 1768
+            }, 
+            "name": "newRoleNames"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1784
+            }, 
+            "name": "mapRoleIdByName"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 1785
+            }, 
+            "name": "setRoleIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 1786
+            }, 
+            "name": "mapGroupIdByRoleId"
+        }, 
+        {
+            "type": "UserRole", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1788
+            }, 
+            "name": "thisRole"
+        }, 
+        {
+            "type": "Group", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1796
+            }, 
+            "name": "thisGroup"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1801
+            }, 
+            "name": "thisCaseId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1802
+            }, 
+            "name": "thisRoleName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 1807
+            }, 
+            "name": "strAccessLevel"
+        }, 
+        {
+            "type": "CaseShare", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1813
+            }, 
+            "name": "newCaseShare"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 1829
+            }, 
+            "name": "CaseIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1830
+            }, 
+            "name": "mapCaseHistory"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1831
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 1839
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1840
+            }, 
+            "name": "caseIds"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1841
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1844
+            }, 
+            "name": "deleteCaseShare"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 1852
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1853
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1854
+            }, 
+            "name": "strRecordTypeName"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 1869
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 10, 
+                "line": 1870
+            }, 
+            "name": "usr"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 1871
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 1911
+            }, 
+            "name": "listCaseComments"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1914
+            }, 
+            "name": "thisComment"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1920
+            }, 
+            "name": "listRows"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1921
+            }, 
+            "name": "currentRow"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1922
+            }, 
+            "name": "thisWord"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 1944
+            }, 
+            "name": "formattedBody"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1945
+            }, 
+            "name": "thisRow"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 1959
+            }, 
+            "name": "listCaseComments"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 1960
+            }, 
+            "name": "COMMENT_MAX_LENGTH"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 1962
+            }, 
+            "name": "thisComment"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1966
+            }, 
+            "name": "charsOver"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 45, 
+                "line": 2006
+            }, 
+            "name": "thisComment"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 2008
+            }, 
+            "name": "formattedBody"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 2011
+            }, 
+            "name": "listRows"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2012
+            }, 
+            "name": "currentRow"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 2015
+            }, 
+            "name": "thisWord"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 2036
+            }, 
+            "name": "thisRow"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 2110
+            }, 
+            "name": "listCaseComments"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2111
+            }, 
+            "name": "COMMENT_MAX_LENGTH"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2112
+            }, 
+            "name": "lengthExceeded"
+        }, 
+        {
+            "type": "CaseComment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 2114
+            }, 
+            "name": "thisComment"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 2118
+            }, 
+            "name": "charsOver"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 2133
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 74, 
+                "line": 2133
+            }, 
+            "name": "mapOldCases"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2134
+            }, 
+            "name": "ownerIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2135
+            }, 
+            "name": "userMap"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 2136
+            }, 
+            "name": "SysAdminProfileId"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2137
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2138
+            }, 
+            "name": "strRecordTypeName"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2145
+            }, 
+            "name": "usr"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2157
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 57, 
+                "line": 2206
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 82, 
+                "line": 2206
+            }, 
+            "name": "mapOldCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 2207
+            }, 
+            "name": "ErrorMessage"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2208
+            }, 
+            "name": "CaseIds"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2209
+            }, 
+            "name": "AccountIds"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2210
+            }, 
+            "name": "PlanIds"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2211
+            }, 
+            "name": "mapPlanAllowedGroups"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2213
+            }, 
+            "name": "mapQueueNames"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2220
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2221
+            }, 
+            "name": "strRecordTypeName"
+        }, 
+        {
+            "type": "QueueSobject", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2230
+            }, 
+            "name": "thisQueue"
+        }, 
+        {
+            "type": "Plan__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2235
+            }, 
+            "name": "thisPlan"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2243
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 2275
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2276
+            }, 
+            "name": "insertCaseShare"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2277
+            }, 
+            "name": "mapUserHasRefillEntry"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2280
+            }, 
+            "name": "CreatedByIds"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2281
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "PermissionSetAssignment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 2285
+            }, 
+            "name": "thisAssignment"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2294
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 2297
+            }, 
+            "name": "RecordTypeName"
+        }, 
+        {
+            "type": "CaseShare", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2302
+            }, 
+            "name": "newCaseShare"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 2316
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 80, 
+                "line": 2316
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2317
+            }, 
+            "name": "deleteCaseShares"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2318
+            }, 
+            "name": "CreatedByIds"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 13, 
+                "line": 2319
+            }, 
+            "name": "CaseIds"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2321
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "CaseShare", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 2327
+            }, 
+            "name": "thisCaseShare"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 2331
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 2344
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 85, 
+                "line": 2344
+            }, 
+            "name": "oldCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 2345
+            }, 
+            "name": "ErrorMessage"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2346
+            }, 
+            "name": "thisCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 2349
+            }, 
+            "name": "OldRecordType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 2352
+            }, 
+            "name": "NewRecordType"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 64, 
+                "line": 2370
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 66, 
+                "line": 2371
+            }, 
+            "name": "mapCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 59, 
+                "line": 2372
+            }, 
+            "name": "operation"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 2374
+            }, 
+            "name": "map_USER"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 2375
+            }, 
+            "name": "userId"
+        }, 
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2377
+            }, 
+            "name": "oUser"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2382
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 49, 
+                "line": 2392
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 66, 
+                "line": 2392
+            }, 
+            "name": "operation"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 2394
+            }, 
+            "name": "roleId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 2396
+            }, 
+            "name": "roleName"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 2401
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 2402
+            }, 
+            "name": "isAlready"
+        }, 
+        {
+            "type": "Datetime", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 2404
+            }, 
+            "name": "currentTime"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2405
+            }, 
+            "name": "lastVal"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2416
+            }, 
+            "name": "updateVal"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 55, 
+                "line": 2424
+            }, 
+            "name": "cases"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 2425
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 54, 
+                "line": 2436
+            }, 
+            "name": "s"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 2443
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 69, 
+                "line": 2443
+            }, 
+            "name": "operation"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 2446
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2448
+            }, 
+            "name": "groupName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2449
+            }, 
+            "name": "plan_account"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2450
+            }, 
+            "name": "client_id"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 2455
+            }, 
+            "name": "parentId"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 32, 
+                "line": 2456
+            }, 
+            "name": "parentDetails"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 2457
+            }, 
+            "name": "parentCase"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2465
+            }, 
+            "name": "empFlag"
+        }, 
+        {
+            "type": "Integer", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2466
+            }, 
+            "name": "grpCount"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 2474
+            }, 
+            "name": "roleId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2476
+            }, 
+            "name": "roleName"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 62, 
+                "line": 2498
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 79, 
+                "line": 2498
+            }, 
+            "name": "operation"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 2500
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 52, 
+                "line": 2508
+            }, 
+            "name": "listCases"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 69, 
+                "line": 2508
+            }, 
+            "name": "operation"
+        }, 
+        {
+            "type": "Case", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2509
+            }, 
+            "name": "objCase"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2511
+            }, 
+            "name": "ownerType"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2512
+            }, 
+            "name": "ownerId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2513
+            }, 
+            "name": "currentPlan"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2514
+            }, 
+            "name": "isShowError"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2517
+            }, 
+            "name": "qName"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 2530
+            }, 
+            "name": "roleName"
+        }
+    ], 
+    "id": "01pi00000054ydwAAA", 
+    "methods": [
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "runOnce", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 44
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "closeOpenAssignmentHistories", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 55
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "syncAssignmentDateTimes", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 77
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "createAssignmentHistory", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "mapOldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 153
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "fetchCaseOwnerNames", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 277
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "fetchPriorAssignments", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 290
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "caseOwnerChangeRestriction", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "listoldcases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 309
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "dataSetup", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 346
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "copyNotesToCustomComment", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 380
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "copyNotesToStdComment", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 427
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "trackFieldChangesCustom", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listcases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 492
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "trackFieldChangesStdSGC", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listcases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 683
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "trackFieldChangesStd", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listcases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 796
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "hasLetterValidationError", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 904
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "hasFaxNumberFormatValidationError", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1026
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "manageFaxNumbers", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1038
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "setOriginalCreatedByData", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "lstCases"
+                }, 
+                {
+                    "type": "LIST", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1112
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isOutsideHours", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 1200
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isInsideHours", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "newList"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldMap"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1220
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "updateRequestTypeLookup", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "lstCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "strOperation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1249
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "sendEmail", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 1369
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "CreateContact", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "EmailRecipient"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 1422
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "DeleteContacts", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "DelCon"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 1433
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "sendMissingRequestTypeEmail", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "setMissingRequestTypes"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1438
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "UpdateAccountLookupFromPlan", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1579
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "populateIntegrationQueue", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "strOperation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1616
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "populatePharmacy", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "casesToProcess"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1629
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "createPlanSharingRecords", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1664
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "isCaseHistorical", 
+            "parameters": [
+                {
+                    "type": "Set", 
+                    "name": "CaseIds"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 1829
+            }, 
+            "returnType": "Map", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "clearExistingPlanSharing", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 1839
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "syncManagingGroupAndQueue", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1852
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "fetchSupervisorEmail", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1869
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "formatCaseComments", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCaseComments"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 1911
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "validateCaseComments", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCaseComments"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 1959
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "wrapComment", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "thisComment"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 2006
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "validateCaseComments", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCaseComments"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 2110
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "changeCaseOwner", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "mapOldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2133
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "validateManagingGroup", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "mapOldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2206
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "createCreatedBySharingRecord", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2275
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "clearCreatedBySharing", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2316
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "validateRecordTypeChange", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "oldCases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2344
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "currentUserManagerEmailAddress", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "Map", 
+                    "name": "mapCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2370
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "currentUserRole", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 2392
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "replaceDoubleQuotes", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "cases"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2424
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private", 
+                "static"
+            ], 
+            "name": "replaceDoubleQuotes", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "s"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 2436
+            }, 
+            "returnType": "String", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "isEmployeeUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2443
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "memberPlanTextUpdate", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 30, 
+                "line": 2498
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "fhcpValidation", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 2508
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

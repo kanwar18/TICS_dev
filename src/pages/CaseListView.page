@@ -1,0 +1,152 @@
+<apex:page standardcontroller="Case" extensions="ListViewTableHandler" showheader="true" sidebar="true" recordSetVar="records">
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/css/ui-lightness/jquery-ui-1.8.13.custom.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/css/theme.blue.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/css/theme.green.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/css/theme.ice.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/jquery.tablesorter.pager.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/css/theme.default.css')}" />
+
+
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/js/jquery-1.5.1.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/js/jquery-ui-1.8.13.custom.min.js')}" /> 
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/js/jquery.tablesorter.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/jquery.tablesorter.pager.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/js/jquery.tablesorter.widgets.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/js/jquery.tablesorter.widgets-filter-formatter.min.js')}" />
+    <script type="text/javascript">
+    $j = jQuery.noConflict(); 
+
+    $j(document).ready(function() { 
+        $j("[id*='MainTable']")
+        .tablesorter({
+          theme: 'blue',
+          widgets: [],
+          widgetOptions : {
+          filter_anyMatch : false,
+          filter_columnFilters: true,
+          filter_hideFilters: true,
+          filter_saveFilters : true,
+          filter_reset: '.reset'
+          }    
+        }) 
+        .tablesorterPager({container: $j(".pager")});
+         // .tablesorterPager({container: $j("[id*='MainTable']")}); 
+     });
+
+    $j(window).load(function(){
+      $j('#firstTR').prev().remove();
+    });  
+
+    function ReloadTableSorter(){
+    $j("[id*='MainTable']")
+        .tablesorter({
+          theme: 'default',
+          widgets: [],
+          widgetOptions : {
+          filter_anyMatch : false,
+          filter_columnFilters: true,
+          filter_hideFilters: true,
+          filter_saveFilters : true,
+          filter_reset: '.reset'
+          }    
+        }) 
+        .tablesorterPager({container: $j(".pager")});
+        //.tablesorterPager({container: $j("[id*='MainTable']")});
+      }
+      //commented out "zebra","filter" in widgets
+    </script>     
+    <div class="full_width">
+    <apex:form >
+        <table style="margin:5px 5px 5px 5px; vertical-align:center">
+          <tr>
+          <td style="cellpadding-right:5px;">
+            <img src="/s.gif" alt="Case" class="pageTitleIcon" title="Case"/>
+           <!-- <apex:selectList value="{!filterId}" size="1">
+              <apex:actionSupport event="onchange" action="{!filter}"/>
+             <apex:selectOptions value="{!listviewoptions}"/>
+            </apex:selectList> -->
+            <apex:selectList value="{!selectedFilter}" size="1">
+              <apex:actionSupport event="onchange" action="{!filter}" />
+             <apex:selectOptions value="{!CaseListViews}"/>
+            </apex:selectList>
+          </td>
+          <td>
+            <!--<apex:outputLink onClick="showColumnSelector()">Add/Remove Columns</apex:outputLink> -->
+            <div class="listViewport">
+              <input class="btn" target="_self" name="newCase" onclick="window.location.href='{!URLFOR($Action.Case.NewCase)}'" title="New Case" value="New Case" type="button"/>
+         <!--   <input type="button" id="{!filterId}_refresh" src="s.gif" href="javascript:void(0)" onclick="window.location.reload()" class="btn refreshListButton" title="Refresh"/> -->
+             <apex:commandButton id="_refresh" styleClass="refreshListButton" style="background-image:url('/img/alohaSkin/sync.png');" title="Refresh" action="{!filter}" /> 
+            </div>
+          </td>
+          </tr>
+        </table>
+        <apex:pageblock >
+          <apex:dataTable value="{!records}" var="record" id="MainTable">
+            <apex:facet name="header">
+            <apex:outputPanel layout="none" id="panel">   
+            <tr id="firstTR">
+                <td style='width:50px;'>
+                </td>
+                <td>
+                  <apex:outputText value="Case Number"/>
+                </td>
+                <apex:repeat value="{!columnTitlesList}" var="title">
+                <td>
+                  <apex:outputText value="{!title}" />
+                </td>                   
+                </apex:repeat>
+           
+                  <td>
+                  <apex:outputText value="Case Commnents" />
+                  </td>
+                 
+                 
+            </tr>
+            </apex:outputPanel>
+            </apex:facet> 
+            <apex:column >
+              <apex:outputField value="{!record.Edit__c}"/> | <a href="/{!record.Id}" target="_self">View</a>
+            </apex:column>
+            <apex:column title="Case Number">
+              <apex:outputLink value="{!URLFOR($Action.Case.View, record.id)}" target="_self">
+                            {!record.CaseNumber}
+                            </apex:outputLink>
+              </apex:column>
+              <apex:repeat value="{!columnFieldsList}" var="field">
+              <apex:column >
+              <apex:outputField value="{!record[field]}"  />
+              </apex:column>
+              </apex:repeat>
+              
+                 <apex:column title="Case Comments" >
+             <apex:outputText value="{!record.Case_Comments__c}" escape="false" />
+              </apex:column>
+
+        
+              <!-- <apex:column >
+                <apex:repeat value="{!mapCommentWrapper[record.Id]}" var="comment">
+                  <b> <apex:outputField value="{!comment.CreatedBy.Name}"/>&nbsp;
+                  (<apex:outputField value="{!comment.CreatedDate}"/>):</b>&nbsp;&nbsp;
+                  <apex:outputField value="{!comment.CommentBody}"/><br/>
+                </apex:repeat>   
+              </apex:column> -->
+          </apex:dataTable>
+          <br/>
+          <div class="pager">
+          <img src="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/icons/first.png')}" class="first" alt="First"/>
+          <img src="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/icons/prev.png')}" class="prev" alt="Prev" />
+          <span class="pagedisplay"></span>
+          <img src="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/icons/next.png')}" class="next" alt="Next" />
+          <img src="{!URLFOR($Resource.JQuery,'/JQuery.resource/tablesorter2/addons/pager/icons/last.png')}" class="last" alt="Last" />
+          <select class="pagesize" title="Select page size">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+          </select>
+          <select class="gotoPage" title="Select page number"></select>
+          </div>
+          </apex:pageblock>
+        </apex:form>
+    </div>    
+</apex:page>
