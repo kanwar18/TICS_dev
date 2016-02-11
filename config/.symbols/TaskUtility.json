@@ -6,13 +6,13 @@
                 "public"
             ], 
             "name": "isExecuting", 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 27, 
                 "line": 2
             }, 
-            "type": "Boolean"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
             "modifiers": [
@@ -20,13 +20,13 @@
                 "public"
             ], 
             "name": "firstRun", 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 27, 
                 "line": 3
             }, 
-            "type": "Boolean"
+            "type": "Boolean", 
+            "annotations": []
         }
     ], 
     "externalReferences": [], 
@@ -36,589 +36,648 @@
     "namespace": null, 
     "name": "TaskUtility", 
     "tableDeclaration": {
-        "type": "TaskUtility", 
         "modifiers": [
             "public", 
             "without sharing"
         ], 
+        "name": "TaskUtility", 
         "references": [], 
         "location": {
             "column": 30, 
             "line": 1
         }, 
-        "name": "TaskUtility"
+        "type": "TaskUtility", 
+        "annotations": []
     }, 
+    "parentClass": "", 
     "key": "01pi00000063OJBAA2", 
     "variables": [
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listTasks", 
             "references": [], 
             "location": {
                 "column": 67, 
                 "line": 4
             }, 
-            "name": "listTasks"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "retMap", 
             "references": [], 
             "location": {
                 "column": 20, 
                 "line": 5
             }, 
-            "name": "retMap"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "String", 
             "modifiers": [], 
+            "name": "ValidationError", 
             "references": [], 
             "location": {
                 "column": 12, 
                 "line": 6
             }, 
-            "name": "ValidationError"
+            "type": "String", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "mapActivityRecordTypeValidations", 
             "references": [], 
             "location": {
                 "column": 50, 
                 "line": 7
             }, 
-            "name": "mapActivityRecordTypeValidations"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "mapTasktoCaseRecordType", 
             "references": [], 
             "location": {
                 "column": 21, 
                 "line": 9
             }, 
-            "name": "mapTasktoCaseRecordType"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "mapCaseIdTaskId", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 11
             }, 
-            "name": "mapCaseIdTaskId"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 14
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "Case", 
             "modifiers": [], 
+            "name": "thisCase", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 23
             }, 
-            "name": "thisCase"
+            "type": "Case", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 28
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "String", 
             "modifiers": [], 
+            "name": "TaskRecordType", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 29
             }, 
-            "name": "TaskRecordType"
+            "type": "String", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listTasks", 
             "references": [], 
             "location": {
                 "column": 50, 
                 "line": 47
             }, 
-            "name": "listTasks"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "LetterSentCheck", 
             "references": [], 
             "location": {
                 "column": 46, 
                 "line": 48
             }, 
-            "name": "LetterSentCheck"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listUpdateCases", 
             "references": [], 
             "location": {
                 "column": 16, 
                 "line": 50
             }, 
-            "name": "listUpdateCases"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 52
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "String", 
             "modifiers": [], 
+            "name": "thisLetterSentCheck", 
             "references": [], 
             "location": {
                 "column": 20, 
                 "line": 54
             }, 
-            "name": "thisLetterSentCheck"
+            "type": "String", 
+            "annotations": []
         }, 
         {
-            "type": "Case", 
             "modifiers": [], 
+            "name": "updCase", 
             "references": [], 
             "location": {
                 "column": 21, 
                 "line": 59
             }, 
-            "name": "updCase"
+            "type": "Case", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listTasks", 
             "references": [], 
             "location": {
                 "column": 63, 
                 "line": 73
             }, 
-            "name": "listTasks"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 74
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listTasks", 
             "references": [], 
             "location": {
                 "column": 53, 
                 "line": 81
             }, 
-            "name": "listTasks"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "statusValues", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 83
             }, 
-            "name": "statusValues"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "caseIds", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 84
             }, 
-            "name": "caseIds"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "taskIds", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 85
             }, 
-            "name": "taskIds"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "casesToUpdate", 
             "references": [], 
             "location": {
                 "column": 16, 
                 "line": 86
             }, 
-            "name": "casesToUpdate"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isQCCheck", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 87
             }, 
-            "name": "isQCCheck"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isExtension", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 88
             }, 
-            "name": "isExtension"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isGrievAck", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 89
             }, 
-            "name": "isGrievAck"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isGrievTimely", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 90
             }, 
-            "name": "isGrievTimely"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isMRSRerch", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 91
             }, 
-            "name": "isMRSRerch"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isMemltr", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 92
             }, 
-            "name": "isMemltr"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isGrvTmlyAck", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 93
             }, 
-            "name": "isGrvTmlyAck"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 94
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "Case", 
             "modifiers": [], 
+            "name": "cs", 
             "references": [], 
             "location": {
                 "column": 18, 
                 "line": 104
             }, 
-            "name": "cs"
+            "type": "Case", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "tsk", 
             "references": [], 
             "location": {
                 "column": 29, 
                 "line": 111
             }, 
-            "name": "tsk"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "srList", 
             "references": [], 
             "location": {
                 "column": 29, 
                 "line": 218
             }, 
-            "name": "srList"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "errorMap", 
             "references": [], 
             "location": {
                 "column": 32, 
                 "line": 219
             }, 
-            "name": "errorMap"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "SaveResult", 
             "modifiers": [], 
+            "name": "sr", 
             "references": [], 
             "location": {
                 "column": 34, 
                 "line": 221
             }, 
-            "name": "sr"
+            "type": "SaveResult", 
+            "annotations": []
         }, 
         {
-            "type": "Error", 
             "modifiers": [], 
+            "name": "err", 
             "references": [], 
             "location": {
                 "column": 36, 
                 "line": 226
             }, 
-            "name": "err"
+            "type": "Error", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "tsk", 
             "references": [], 
             "location": {
                 "column": 22, 
                 "line": 238
             }, 
-            "name": "tsk"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "LIST", 
             "modifiers": [], 
+            "name": "listTasks", 
             "references": [], 
             "location": {
                 "column": 60, 
                 "line": 251
             }, 
-            "name": "listTasks"
+            "type": "LIST", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "allowedProfiles", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 252
             }, 
-            "name": "allowedProfiles"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "caseMap", 
             "references": [], 
             "location": {
                 "column": 18, 
                 "line": 253
             }, 
-            "name": "caseMap"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "caseIds", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 254
             }, 
-            "name": "caseIds"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Profile", 
             "modifiers": [], 
+            "name": "pro", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 255
             }, 
-            "name": "pro"
+            "type": "Profile", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "taskTypes", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 258
             }, 
-            "name": "taskTypes"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Map", 
             "modifiers": [], 
+            "name": "errorsMap", 
             "references": [], 
             "location": {
                 "column": 24, 
                 "line": 260
             }, 
-            "name": "errorsMap"
+            "type": "Map", 
+            "annotations": []
         }, 
         {
-            "type": "String", 
             "modifiers": [], 
+            "name": "msg", 
             "references": [], 
             "location": {
                 "column": 12, 
                 "line": 261
             }, 
-            "name": "msg"
+            "type": "String", 
+            "annotations": []
         }, 
         {
-            "type": "String", 
             "modifiers": [], 
+            "name": "msg1", 
             "references": [], 
             "location": {
                 "column": 12, 
                 "line": 262
             }, 
-            "name": "msg1"
+            "type": "String", 
+            "annotations": []
         }, 
         {
-            "type": "Set", 
             "modifiers": [], 
+            "name": "taskIds", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 263
             }, 
-            "name": "taskIds"
+            "type": "Set", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "thisTask", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 264
             }, 
-            "name": "thisTask"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "tsk", 
             "references": [], 
             "location": {
                 "column": 14, 
                 "line": 273
             }, 
-            "name": "tsk"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "Integer", 
             "modifiers": [], 
+            "name": "attCount", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 275
             }, 
-            "name": "attCount"
+            "type": "Integer", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "byPass", 
             "references": [], 
             "location": {
                 "column": 17, 
                 "line": 276
             }, 
-            "name": "byPass"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Task", 
             "modifiers": [], 
+            "name": "t", 
             "references": [], 
             "location": {
                 "column": 16, 
                 "line": 288
             }, 
-            "name": "t"
+            "type": "Task", 
+            "annotations": []
         }, 
         {
-            "type": "Datetime", 
             "modifiers": [], 
+            "name": "taskDateTime", 
             "references": [], 
             "location": {
-                "column": 44, 
+                "column": 43, 
                 "line": 296
             }, 
-            "name": "taskDateTime"
+            "type": "Datetime", 
+            "annotations": []
         }, 
         {
-            "type": "Datetime", 
             "modifiers": [], 
+            "name": "primeDateTime", 
             "references": [], 
             "location": {
-                "column": 67, 
+                "column": 66, 
                 "line": 296
             }, 
-            "name": "primeDateTime"
+            "type": "Datetime", 
+            "annotations": []
         }, 
         {
-            "type": "Boolean", 
             "modifiers": [], 
+            "name": "isValid", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 297
             }, 
-            "name": "isValid"
+            "type": "Boolean", 
+            "annotations": []
         }, 
         {
-            "type": "Integer", 
             "modifiers": [], 
+            "name": "intDays", 
             "references": [], 
             "location": {
                 "column": 13, 
                 "line": 299
             }, 
-            "name": "intDays"
+            "type": "Integer", 
+            "annotations": []
         }
     ], 
     "id": "01pi00000063OJBAA2", 
@@ -635,14 +694,14 @@
                     "name": "listTasks"
                 }
             ], 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 32, 
                 "line": 4
             }, 
             "returnType": "Map", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }, 
         {
             "modifiers": [
@@ -656,14 +715,14 @@
                     "name": "listTasks"
                 }
             ], 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 22, 
                 "line": 47
             }, 
             "returnType": "void", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }, 
         {
             "modifiers": [
@@ -677,14 +736,14 @@
                     "name": "listTasks"
                 }
             ], 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 22, 
                 "line": 73
             }, 
             "returnType": "void", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }, 
         {
             "modifiers": [
@@ -698,14 +757,14 @@
                     "name": "listTasks"
                 }
             ], 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 22, 
                 "line": 81
             }, 
             "returnType": "void", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }, 
         {
             "modifiers": [
@@ -719,19 +778,19 @@
                     "name": "listTasks"
                 }
             ], 
-            "visibility": "PUBLIC", 
             "references": [], 
             "location": {
                 "column": 22, 
                 "line": 251
             }, 
             "returnType": "void", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }, 
         {
             "modifiers": [
-                "private", 
-                "static"
+                "static", 
+                "public"
             ], 
             "name": "dateDiff", 
             "parameters": [
@@ -744,14 +803,14 @@
                     "name": "primeDateTime"
                 }
             ], 
-            "visibility": "PRIVATE", 
             "references": [], 
             "location": {
-                "column": 26, 
+                "column": 25, 
                 "line": 296
             }, 
             "returnType": "Boolean", 
-            "type": null
+            "type": null, 
+            "annotations": []
         }
     ]
 }

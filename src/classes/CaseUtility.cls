@@ -1023,6 +1023,49 @@ system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
     return ErrorMessage;
   }
   
+  public static void checkGrvAckLetter(map<Id,Case> newMap, map<Id,Case> oldMap){
+    set<string> statusValues = new set<string>{'Completed','Sent','Printed'};
+    boolean isGrvTmlyAck = false;
+    if(newMap != NULL){
+      map<Id, Task> taskMap = new map<Id,Task>([Select Id,Status,WhatId,Type,Date_Time_Completed__c from task where WhatId IN: newMap.keyset()]);
+      //for(task tsk: [Select Id,Status,WhatId,Type,Date_Time_Completed__c from task where WhatId IN: newMap.keyset()]){
+       //   taskMap.put(tsk.WhatId,tsk);
+      //}
+      system.debug('taskMap>>'+taskMap.size());
+
+      for(case cs: newMap.values()){
+        system.debug(oldMap.get(cs.Id).Prime_Receipt_Date_Time__c+'------@@----'+cs.Prime_Receipt_Date_Time__c);
+        if((cs.RecordTypeId == '012i0000000rJC7' || cs.RecordTypeId == '012i0000001M7Co') && taskMap != NULL && cs.Prime_Receipt_Date_Time__c != oldMap.get(cs.Id).Prime_Receipt_Date_Time__c){
+          for(task tsk : taskMap.values()){
+            if(statusValues.contains(tsk.status) && tsk.Type == 'Grievance Acknowledgement Letter' ){
+              system.debug(tsk.Date_Time_Completed__c+'<<<TASK>>>'+cs.Prime_Receipt_Date_Time__c);
+              if(tsk.Date_Time_Completed__c != null){
+                  system.debug('H<<<IFFF>>>');
+                  if(TaskUtility.dateDiff(cs.Prime_Receipt_Date_Time__c,tsk.Date_Time_Completed__c)){
+                    isGrvTmlyAck = true;
+                    system.debug('<<<%%%%>>>');
+                  }
+                  else
+                    isGrvTmlyAck = false;
+
+              }
+            //continue;
+            }
+          }//task for loop ends here
+          if(isGrvTmlyAck){
+            system.debug('THEREE IF>>>');
+              cs.Grievance_Timely_Acknowledged__c = true;
+          }
+          else{
+            system.debug('THEREE ELSE>>>');
+            cs.Grievance_Timely_Acknowledged__c = false;
+          }
+        }
+      }//Case for loop ends here
+    }
+
+  }
+
   public static String hasFaxNumberFormatValidationError(list<Case> listCases){    
     string ErrorMessage = null;
     for(Case c : listCases){
@@ -1035,80 +1078,7 @@ system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
     return ErrorMessage;    
   }
   
-  public static void manageFaxNumbers(list<Case> listCases){     
-     Set<String> setFaxNum = new Set<String>();
-     List<Fax_Numbers__c> lstFaxRecToInsert = new List<Fax_Numbers__c>();
-     
-     for(Case cFax : listCases){
-        setFaxNum.add(cFax.Prescribers_Fax_Number__c);
-     }
-         
-     //get list of existing fax #'s
-     List<Fax_Numbers__c> lstFaxRec = new list<Fax_Numbers__c>();
-     Map<String, String> mapFaxRec = new Map<String, String>();
-     
-     if(setFaxNum.size()>0){
-         lstFaxRec = [select Fax__c, Id from Fax_Numbers__c where Fax__c in :setFaxNum]; 
-         //add to map for processing loop reference
-         for(Fax_Numbers__c fn : lstFaxRec){ //*TODO: Move SELECT INTO LOOP
-            mapFaxRec.put(fn.Fax__c, fn.Id);
-         }
-     }
-         
-     
-     
-     
-     //insert missing fax num first
-     for(Case c : listCases){
-        if(c.Prescribers_Fax_Number__c !=null 
-            && !mapFaxRec.containsKey(c.Prescribers_Fax_Number__c)){
-                Fax_Numbers__c newFN = new Fax_Numbers__c(
-                Name=c.Prescribers_Fax_Number__c,
-                Fax__c=c.Prescribers_Fax_Number__c
-            );
-            lstFaxRecToInsert.add(newFN);
-        } 
-     }
-     if(lstFaxRecToInsert.size() > 0){
-        insert lstFaxRecToInsert;       
-        //add new fax num to map
-        for(Fax_Numbers__c newFN : lstFaxRecToInsert){
-            mapFaxRec.put(newFN.Fax__c, newFN.Id);
-        }
-     }      
-     
-     //update case fax #
-     /*for(Case c : listCases){
-        if(c.Prescribers_Fax_Number__c !=null){
-            c.Prescriber_Fax_Lookup__c = mapFaxRec.get(c.Prescribers_Fax_Number__c);
-        } else if(c.Prescribers_Fax_Number__c == null) {
-            c.Prescriber_Fax_Lookup__c = null;
-        }
-     } 
-     */                         
-  }
-
-   /*public static map<Id,case> checkOriginalRequestDate(list<Case> lstCases) {
-    //set original created by fields if case is created via the gui as opposed via integration
-    map<Id,case> errorCaseMap = new map<Id,case>();
     
-    String SysAdminProfileId  = [ Select Id from Profile Where NAme='System Administrator'].Id;
-    for(Case c : lstCases) { 
-        DateTime Original_Request_Date;
-        if(UserInfo.getProfileId()  != SysAdminProfileId){
-          if(c.Original_Request_Date_Time__c > c.CreatedDate){
-            //Original_Request_Date = c.CreatedDate;
-            errorCaseMap.put(c.id, c);
-            system.debug('FOUND ERROR:: '+errorCaseMap);
-          }
-    }
-    }
-        return errorCaseMap;
-        
-  }*/
-
-  
-  
   public static void setOriginalCreatedByData(list<Case> lstCases, list<case> oldCases) {
     //set original created by fields if case is created via the gui as opposed via integration
     List<Case> lstCasesToUpdate = new List<Case>();
@@ -1705,7 +1675,8 @@ public void MediCareAlert(){
                   .getRecordTypeInfosById()
                   .get(thisCase.RecordTypeId).getName();
         if((strRecordTypeName.contains('Item') || strRecordTypeName == 'Task')
-             && thisCase.Request_Type__c != 'Crisis Management'){
+             && thisCase.Request_Type__c != 'Crisis Management'&& thisCase.Request_Type__c != 'Prof Practices - Complaint'&& thisCase.Request_Type__c != 'Research'){
+            
           for(String thisPlanContains : mapPlanSharingRuleIncludes.keySet()){
             if(thisCase.Member_Plan_Name__c != null){
               if(thisCase.Member_Plan_Name__c.contains(thisPlanContains)){
@@ -2509,12 +2480,13 @@ public static boolean validateCaseComments(list<CaseComment> listCaseComments){
         case objCase = listCases.get(0);
             if( (objCase.RecordTypeId==rtTask)||(objCase.RecordTypeId==rtItem)||(objCase.RecordTypeId==rtGrievance)){
                 String ownerType=objCase.Owner_Type__c;
-                String ownerId= objCase.OwnerId;	
+                String ownerId= objCase.OwnerId;    
                 String currentPlan=objCase.Member_Plan_Name__c;
-                boolean isShowError=false;        
-                if(ownerType=='Queue'){
+                boolean isShowError=false; 
+                   if(ownerType=='Queue'){
                     try{               
                  String qName=[select  queue.name from queuesobject where queue.id=:ownerId].queue.name;
+                      
                      if(objCase.Member_Plan_Name__c != null){
                     if(!currentPlan.contains('H1035')&&qName.contains('FHCP')){
                         isShowError=true;
@@ -2522,9 +2494,9 @@ public static boolean validateCaseComments(list<CaseComment> listCaseComments){
                      }
                     }
                     catch(Exception ex){
-                        
+                       
                     }
-            	}
+                }
                 else{
                     try{
                    String roleName=[Select userrole.name from User where Id=:ownerId].userrole.name;
@@ -2541,7 +2513,7 @@ public static boolean validateCaseComments(list<CaseComment> listCaseComments){
                 }
                 if(isShowError){
                         objCase.addError('The Owner or Queue you have selected is not valid for Cases at this Client / Plan.  Please select a different Owner Queue or User');
-                    	errorIdsSet.add(objCase.Id);    
+                        errorIdsSet.add(objCase.Id);    
                 }                                
         
             } 

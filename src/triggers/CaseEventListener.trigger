@@ -188,10 +188,6 @@ trigger CaseEventListener on Case (before insert, before update,
     //Pre-Update Methods
     CaseTriggerSwitch__c RunTrigger 
       = CaseTriggerSwitch__c.getInstance('hasLetterValidationError');
-   
-
-
-
     
     if(RunTrigger != null && RunTrigger.IsActive__c){
       String validationError 
@@ -210,10 +206,6 @@ trigger CaseEventListener on Case (before insert, before update,
         
     }
     
-
-
-
-
     system.debug('CaseUtility.isInsertOnly2:: '+CaseUtility.isInsertOnly);
     /*if(!CaseUtility.isInsertOnly){
         errorMap = CaseUtility.checkOriginalRequestDate(trigger.new);
@@ -225,7 +217,7 @@ trigger CaseEventListener on Case (before insert, before update,
             }
         }
     }*/
-    
+   caseUtility.checkGrvAckLetter(trigger.newMap, trigger.oldMap); 
        
 RunTrigger 
       = CaseTriggerSwitch__c.getInstance('isInsideHours');
@@ -371,6 +363,7 @@ RunTrigger
     }*/  
     
     if(CaseUtility.runOnce()){
+      
         RunTrigger 
           = CaseTriggerSwitch__c.getInstance('copyNotesToStdComment');  
         if(RunTrigger != null && RunTrigger.IsActive__c){

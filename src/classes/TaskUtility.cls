@@ -58,7 +58,7 @@ public without sharing class TaskUtility {
                 && LetterSentCheck.get(thisLetterSentCheck).Activity_Status__c.Contains(thisTask.Status)){
                Case updCase = new Case(Id = thisTask.WhatId);
                updCase.put(LetterSentCheck.get(thisLetterSentCheck).Case_Field_to_Set__c, true);
-               updCase.put(LetterSentCheck.get(thisLetterSentCheck).Case_Date_Field__c, datetime.NOW());
+               //updCase.put(LetterSentCheck.get(thisLetterSentCheck).Case_Date_Field__c, datetime.NOW());
                listUpdateCases.add(updCase);
             }
           }
@@ -122,7 +122,7 @@ public without sharing class TaskUtility {
                     }
                     if(statusValues.contains(tsk.status) && tsk.Type == 'Grievance Acknowledgement Letter' ){
                         isGrievAck = true;
-                        system.debug(tsk.Date_Time_Completed__c+'<<<TASK>>>'+cs.Prime_Receipt_Date_Time__c+'------>>'+Math.abs(integer.valueOf(tsk.Date_Time_Completed__c.date().daysBetween(cs.Prime_Receipt_Date_Time__c.date()))));
+                        //system.debug(tsk.Date_Time_Completed__c+'<<<TASK>>>'+cs.Prime_Receipt_Date_Time__c+'------>>'+Math.abs(integer.valueOf(tsk.Date_Time_Completed__c.date().daysBetween(cs.Prime_Receipt_Date_Time__c.date()))));
                         if(tsk.Date_Time_Completed__c != null){
                             system.debug('HTHIS>>>');
                             if(dateDiff(cs.Prime_Receipt_Date_Time__c,tsk.Date_Time_Completed__c)){
@@ -218,7 +218,7 @@ public without sharing class TaskUtility {
       Database.SaveResult[] srList = Database.update(casesToUpdate, false);
        map<StatusCode, string> errorMap = new map<StatusCode, string>();
         // Iterate through each returned result
-        for (Database.SaveResult sr : srList) {
+        for (Database.SaveResult sr : srList) { 
             if (!sr.isSuccess()) {
                 // Operation was successful, so get the ID of the record that was processed
                 System.debug('Case. Case ID: ' + sr.getId());
@@ -293,10 +293,12 @@ public without sharing class TaskUtility {
   }
 
 
-  private static boolean dateDiff(dateTime taskDateTime, dateTime primeDateTime){
+  public static boolean dateDiff(dateTime taskDateTime, dateTime primeDateTime){
     boolean isValid =false;
     system.debug(taskDateTime+'<<>>'+primeDateTime);
-    integer intDays =  Math.abs(integer.valueOf(taskDateTime.Date().daysBetween(primeDateTime.Date())));
+    integer intDays = 10;
+    if(taskDateTime != null && primeDateTime != null)
+      intDays =  Math.abs(integer.valueOf(taskDateTime.Date().daysBetween(primeDateTime.Date())));
     if(intDays <= 5){
       //datetime sameDayEndDate = taskDateTime.addDays(intDays);
       //if(sameDayEndDate.getTime() > primeDateTime.getTime())
