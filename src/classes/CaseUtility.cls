@@ -909,33 +909,25 @@ public without sharing class CaseUtility {
     set<string> planIds = new set<string>();
     map<Id, Plan__c> mapCasePlans = new map<Id, Plan__c>();
     
-    map<String, CaseTaskValidationTypes__c> ValidationTypes 
-    = CaseTaskValidationTypes__c.getAll();
+    map<String, CaseTaskValidationTypes__c> ValidationTypes = CaseTaskValidationTypes__c.getAll();
     map<Id, Case> CaseIdsToValidate = new map<Id, Case>();
 
     for(String validationName : ValidationTypes.keySet()){
-      if(ValidationTypes.get(validationName).Task_Status__c != null 
-                         && ValidationTypes.get(validationName).Task_Status__c != ''){
-        for(String thisTaskStatus : validationTypes.get(validationName)
-                                          .Task_Status__c.split('\\,')){
+      if(ValidationTypes.get(validationName).Task_Status__c != null && ValidationTypes.get(validationName).Task_Status__c != ''){
+        for(String thisTaskStatus : validationTypes.get(validationName).Task_Status__c.split('\\,')){
           setTaskStatuses.add(thisTaskStatus.trim());
         }
       }
-      if(ValidationTypes.get(validationName).Task_Types__c != null 
-                         && ValidationTypes.get(validationName).Task_Types__c != ''){
-        for(String thisTaskType : ValidationTypes.get(validationName)
-                                          .Task_Types__c.split('\\,')){
+      if(ValidationTypes.get(validationName).Task_Types__c != null && ValidationTypes.get(validationName).Task_Types__c != ''){
+        for(String thisTaskType : ValidationTypes.get(validationName).Task_Types__c.split('\\,')){
          setTaskTypes.add(thisTaskType.trim());
         }
       }
 
-    }
-system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
+    }// String for loop ends here
+    system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
     for(Case thisCase : listCases){
-      String thisRecordType 
-        = Schema.SObjectType.Case
-          .getRecordTypeInfosById()
-          .get(thisCase.RecordTypeId).getName();
+      String thisRecordType = Schema.SObjectType.Case.getRecordTypeInfosById().get(thisCase.RecordTypeId).getName();
       for(String validationName : ValidationTypes.keySet()){
         if(ValidationTypes.get(validationName).Record_Types__c.contains(thisRecordType)){   // && ValidationTypes.get(validationName).Case_Status__c.contains(thisCase.Status)
           CaseIdsToValidate.put(thisCase.Id, thisCase);
@@ -943,7 +935,7 @@ system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
             planIds.add(thisCase.Member_Plan_Lookup__c);
         }
       }
-    }
+    } //Case for loop ends here
     
     if(planIds.size()>0)
         mapCasePlans = new map<Id, Plan__c>([select id, name, Delegated__c from plan__c where Id in:planIds]);
@@ -956,68 +948,72 @@ system.debug(logginglevel.ERROR, 'NICK Task Types: ' + setTaskTypes);
     if(CaseIdsToValidate.size()>0){
         for(Task thisTask : [SELECT Id, Type, WhatId, Status, (Select Id FROM Attachments)
                              FROM Task WHERE WhatId IN :CaseIdsToValidate.keySet() AND Type IN :setTaskTypes]){
-      String thisCaseRecordType 
-        = Schema.SObjectType.Case.getRecordTypeInfosById().get(CaseIdsToValidate.get(thisTask.WhatId).RecordTypeId).getName();
-      String thisCaseStatus = CaseIdsToValidate.get(thisTask.WhatId).Status;
-      for(String validationName : ValidationTypes.keySet()){
-        boolean blnStautsOrCheckbox = false;
-        if(ValidationTypes.get(validationName).Case_Status__c.contains(thisCaseStatus)){
-          blnStautsOrCheckbox = true;
-          system.debug('blnStautsOrCheckbox:: '+blnStautsOrCheckbox);
-        }
-        if(ValidationTypes.get(validationName) != null){
-          if(ValidationTypes.get(validationName).CheckBox__c != null){
-            for(String thisChkbox : ValidationTypes.get(validationName).Checkbox__c.split('\\,')){
-              String fieldName = thisChkbox.trim();
-              system.debug(logginglevel.ERROR, 'NICK Chk Field Name: ' + fieldName);
-              if(CaseIdsToValidate.get(thisTask.WhatId).get(fieldName) != null){
-                if(CaseIdsToValidate.get(thisTask.WhatId).get(fieldName) == true) {
-                  system.debug(logginglevel.ERROR, 'NICK Field Val IS True');
-                  blnStautsOrCheckbox = true;
+        String thisCaseRecordType = Schema.SObjectType.Case.getRecordTypeInfosById().get(CaseIdsToValidate.get(thisTask.WhatId).RecordTypeId).getName();
+        String thisCaseStatus = CaseIdsToValidate.get(thisTask.WhatId).Status;
+        for(String validationName : ValidationTypes.keySet()){
+          boolean blnStautsOrCheckbox = false;
+          if(ValidationTypes.get(validationName).Case_Status__c.contains(thisCaseStatus)){
+            blnStautsOrCheckbox = true;
+            system.debug('blnStautsOrCheckbox:: '+blnStautsOrCheckbox);
+          }
+          if(ValidationTypes.get(validationName) != null){
+            if(ValidationTypes.get(validationName).CheckBox__c != null){
+              for(String thisChkbox : ValidationTypes.get(validationName).Checkbox__c.split('\\,')){
+                String fieldName = thisChkbox.trim();
+                system.debug(logginglevel.ERROR, 'NICK Chk Field Name: ' + fieldName);
+                if(CaseIdsToValidate.get(thisTask.WhatId).get(fieldName) != null){
+                  if(CaseIdsToValidate.get(thisTask.WhatId).get(fieldName) == true) {
+                    system.debug(logginglevel.ERROR, 'NICK Field Val IS True');
+                    blnStautsOrCheckbox = true;
+                  }
                 }
               }
             }
           }
-        }
         if(Test.isRunningTest())
             blnStautsOrCheckbox = true; 
-        if(Case_Utility_Settings__c.getInstance('Settings').Task_Attachment_Validation__c) {
+        if(Case_Utility_Settings__c.getInstance('Settings').Task_Attachment_Validation__c){
             system.debug('TASK-TYPES--'+ValidationTypes.get(validationName).Task_Types__c);
             system.debug(mapCaseIdWithDelegPlan.get(thisTask.WhatId)+'-this task type: '+thisTask.Type+'-SIZE::'+thisTask.Attachments.size());
             system.debug(blnStautsOrCheckbox+'-FIRSTCOND:'+ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType)+'---'+ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type));
           if(ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType) && (blnStautsOrCheckbox == true)
              && ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type)){
-            if(ValidationTypes.get(validationName).Requires_Attachment__c){ //requires attachment
-              if(thisTask.Attachments.size() == 0 && mapCaseIdWithDelegPlan.get(thisTask.WhatId)){ //doesnt have one ---- and if it is Delegated plan
-                if(ErrorMessage != null){
-                    ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type+' must have an attachment. \r\n \r\n  ';
-                } else {
-                  ErrorMessage = 'Activity ' + thisTask.Type + ' must have an attachment. \r\n \r\n  ';
-                }
-              } else {
-                if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //has attach, but bad status ??Add Checkbox Field to CS?
+            if(mapCaseIdWithDelegPlan.get(thisTask.WhatId)){ //If delegated Plan, check for task validations 
+                if(ValidationTypes.get(validationName).Requires_Attachment__c){ //requires attachment setTaskStatuses
+                  if(thisTask.Attachments.size() == 0 && ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //doesnt have one ---- and if task Status is printed or sent
+                    if(ErrorMessage != null){
+                        ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type+' must have an attachment. \r\n \r\n  ';
+                    } else {
+                      ErrorMessage = 'Activity ' + thisTask.Type + ' must have an attachment. \r\n \r\n  ';
+                    }
+                  } 
+                  else {
+                    if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //has attach, but bad status ??Add Checkbox Field to CS?
+                      if(ErrorMessage != null){
+                        ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type + ' must be completed prior to closing this case. \r\n \r\n  ';
+                      } else {
+                        ErrorMessage = 'Activity ' + thisTask.Type+ ' must be completed prior to closing this case. \r\n \r\n  ';
+                      }
+                    }
+                  }
+              } 
+              else { //doesn't require attachment
+                if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //no attach required, bad status ??Add Checkbox Field to CS?
                   if(ErrorMessage != null){
-                    ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type + ' must be completed prior to closing this case. \r\n \r\n  ';
+                    ErrorMessage = ErrorMessage + 'Activty ' + thisTask.Type 
+                       + ' must be completed prior to closing this case. \r\n \r\n  ';
                   } else {
-                    ErrorMessage = 'Activity ' + thisTask.Type+ ' must be completed prior to closing this case. \r\n \r\n  ';
+                    ErrorMessage = 'Activity ' + thisTask.Type 
+                       + ' must be completed prior to closing this case. \r\n \r\n  ';
                   }
                 }
               }
-            } else { //doesn't require attachment
-              if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //no attach required, bad status ??Add Checkbox Field to CS?
-                if(ErrorMessage != null){
-                  ErrorMessage = ErrorMessage + 'Activty ' + thisTask.Type 
-                     + ' must be completed prior to closing this case. \r\n \r\n  ';
-                } else {
-                  ErrorMessage = 'Activity ' + thisTask.Type 
-                     + ' must be completed prior to closing this case. \r\n \r\n  ';
-                }
-              }
             }
+            
           }
         }
-      }
-    }
+      } //string for loop ends here
+    }//Task for loop ends here
     }
     system.debug('ErrorMessage::: '+ErrorMessage);
     return ErrorMessage;
