@@ -978,7 +978,7 @@ public without sharing class CaseUtility {
             system.debug(blnStautsOrCheckbox+'-FIRSTCOND:'+ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType)+'---'+ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type));
           if(ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType) && (blnStautsOrCheckbox == true)
              && ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type)){
-            if(mapCaseIdWithDelegPlan.get(thisTask.WhatId)){ //If delegated Plan, check for task validations 
+            if(mapCaseIdWithDelegPlan.get(thisTask.WhatId) && !CaseIdsToValidate.get(thisTask.WhatId).IsAdminUser__c){ //If delegated Plan, check for task validations 
                 if(ValidationTypes.get(validationName).Requires_Attachment__c){ //requires attachment setTaskStatuses
                   if(thisTask.Attachments.size() == 0 && ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //doesnt have one ---- and if task Status is printed or sent
                     if(ErrorMessage != null){
