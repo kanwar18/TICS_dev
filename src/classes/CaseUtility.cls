@@ -978,9 +978,12 @@ public without sharing class CaseUtility {
             system.debug(blnStautsOrCheckbox+'-FIRSTCOND:'+ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType)+'---'+ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type));
           if(ValidationTypes.get(validationName).Record_Types__c.contains(thisCaseRecordType) && (blnStautsOrCheckbox == true)
              && ValidationTypes.get(validationName).Task_Types__c.contains(thisTask.Type)){
-            if(mapCaseIdWithDelegPlan.get(thisTask.WhatId) && !CaseIdsToValidate.get(thisTask.WhatId).IsAdminUser__c){ //If delegated Plan, check for task validations 
+            system.debug('11111111');
+            if(!CaseIdsToValidate.get(thisTask.WhatId).IsAdminUser__c){ //System admin, skip validations 
                 if(ValidationTypes.get(validationName).Requires_Attachment__c){ //requires attachment setTaskStatuses
+                  system.debug(ValidationTypes.get(validationName).Task_Status__c+'<<<222222>>>'+thisTask.Status);
                   if(thisTask.Attachments.size() == 0 && ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //doesnt have one ---- and if task Status is printed or sent
+                    system.debug('IF CONDITIOn'+mapCaseIdWithDelegPlan.get(thisTask.WhatId));
                     if(ErrorMessage != null){
                         ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type+' must have an attachment. \r\n \r\n  ';
                     } else {
@@ -988,6 +991,7 @@ public without sharing class CaseUtility {
                     }
                   } 
                   else {
+                    system.debug('111<<1111>>1'+ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status));
                     if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //has attach, but bad status ??Add Checkbox Field to CS?
                       if(ErrorMessage != null){
                         ErrorMessage = ErrorMessage + 'Activity ' + thisTask.Type + ' must be completed prior to closing this case. \r\n \r\n  ';
@@ -998,6 +1002,7 @@ public without sharing class CaseUtility {
                   }
               } 
               else { //doesn't require attachment
+                system.debug('ELSE SECOND>>'+ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status));
                 if(!ValidationTypes.get(validationName).Task_Status__c.contains(thisTask.Status)){ //no attach required, bad status ??Add Checkbox Field to CS?
                   if(ErrorMessage != null){
                     ErrorMessage = ErrorMessage + 'Activty ' + thisTask.Type 
@@ -2516,5 +2521,23 @@ public static boolean validateCaseComments(list<CaseComment> listCaseComments){
         
     
       }
+    
+     public static void caseOwnerChangeHistoryCases(list<case> listCases,string operation){ 
+        case objCase = listCases.get(0);
+            if(!objCase.IsAdminUser__c){
+            if( (objCase.RecordTypeId==rtItem)||(objCase.RecordTypeId==rtGrievance)){
+                if(objCase.Historical__c){
+                String ownerType=objCase.Owner_Type__c;
+                String ownerId= objCase.OwnerId; 
+                    system.debug('hero anoop'+ownerId);
+                    if(!ownerId.contains('00Gi0000003HSf3')){
+                       objCase.addError('You do not have the level of access necessary to perform the operation you requested. Please contact the owner of the record or your administrator if access is necessary');
+                        errorIdsSet.add(objCase.Id);   
+                    }
+                }
+            }
+         }
+     }
+    
     
 }

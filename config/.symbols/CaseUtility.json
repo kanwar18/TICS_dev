@@ -561,7 +561,7 @@
             "references": [], 
             "location": {
                 "column": 31, 
-                "line": 1972
+                "line": 1977
             }, 
             "type": "Integer", 
             "annotations": []
@@ -1894,7 +1894,7 @@
             "references": [], 
             "location": {
                 "column": 53, 
-                "line": 1022
+                "line": 1027
             }, 
             "type": "Map", 
             "annotations": []
@@ -1905,7 +1905,7 @@
             "references": [], 
             "location": {
                 "column": 74, 
-                "line": 1022
+                "line": 1027
             }, 
             "type": "Map", 
             "annotations": []
@@ -1916,7 +1916,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1023
+                "line": 1028
             }, 
             "type": "Set", 
             "annotations": []
@@ -1927,7 +1927,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 1024
+                "line": 1029
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -1938,7 +1938,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1026
+                "line": 1031
             }, 
             "type": "Map", 
             "annotations": []
@@ -1949,7 +1949,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1032
+                "line": 1037
             }, 
             "type": "Case", 
             "annotations": []
@@ -1960,7 +1960,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1035
+                "line": 1040
             }, 
             "type": "Task", 
             "annotations": []
@@ -1971,7 +1971,7 @@
             "references": [], 
             "location": {
                 "column": 69, 
-                "line": 1065
+                "line": 1070
             }, 
             "type": "LIST", 
             "annotations": []
@@ -1982,7 +1982,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 1066
+                "line": 1071
             }, 
             "type": "String", 
             "annotations": []
@@ -1993,7 +1993,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1067
+                "line": 1072
             }, 
             "type": "Case", 
             "annotations": []
@@ -2004,7 +2004,7 @@
             "references": [], 
             "location": {
                 "column": 58, 
-                "line": 1078
+                "line": 1083
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2015,7 +2015,7 @@
             "references": [], 
             "location": {
                 "column": 79, 
-                "line": 1078
+                "line": 1083
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2026,7 +2026,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1080
+                "line": 1085
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2037,7 +2037,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1081
+                "line": 1086
             }, 
             "type": "Set", 
             "annotations": []
@@ -2048,7 +2048,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1085
+                "line": 1090
             }, 
             "type": "Case", 
             "annotations": []
@@ -2059,7 +2059,7 @@
             "references": [], 
             "location": {
                 "column": 28, 
-                "line": 1090
+                "line": 1095
             }, 
             "type": "IntegrationUserID__c", 
             "annotations": []
@@ -2070,7 +2070,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1091
+                "line": 1096
             }, 
             "type": "String", 
             "annotations": []
@@ -2081,7 +2081,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1094
+                "line": 1099
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2092,7 +2092,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 1098
+                "line": 1103
             }, 
             "type": "Map", 
             "annotations": []
@@ -2103,7 +2103,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1100
+                "line": 1105
             }, 
             "type": "User", 
             "annotations": []
@@ -2114,7 +2114,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1104
+                "line": 1109
             }, 
             "type": "Case", 
             "annotations": []
@@ -2125,7 +2125,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1109
+                "line": 1114
             }, 
             "type": "Datetime", 
             "annotations": []
@@ -2136,7 +2136,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1167
+                "line": 1172
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -2147,7 +2147,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1168
+                "line": 1173
             }, 
             "type": "Time", 
             "annotations": []
@@ -2158,7 +2158,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1169
+                "line": 1174
             }, 
             "type": "Time", 
             "annotations": []
@@ -2169,7 +2169,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1171
+                "line": 1176
             }, 
             "type": "Time", 
             "annotations": []
@@ -2180,7 +2180,7 @@
             "references": [], 
             "location": {
                 "column": 49, 
-                "line": 1186
+                "line": 1191
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2191,7 +2191,7 @@
             "references": [], 
             "location": {
                 "column": 71, 
-                "line": 1186
+                "line": 1191
             }, 
             "type": "Map", 
             "annotations": []
@@ -2202,7 +2202,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1187
+                "line": 1192
             }, 
             "type": "String", 
             "annotations": []
@@ -2213,7 +2213,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1188
+                "line": 1193
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -2224,7 +2224,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1189
+                "line": 1194
             }, 
             "type": "Time", 
             "annotations": []
@@ -2235,7 +2235,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1190
+                "line": 1195
             }, 
             "type": "Time", 
             "annotations": []
@@ -2246,7 +2246,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1191
+                "line": 1196
             }, 
             "type": "Time", 
             "annotations": []
@@ -2257,7 +2257,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1192
+                "line": 1197
             }, 
             "type": "Time", 
             "annotations": []
@@ -2268,7 +2268,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1193
+                "line": 1198
             }, 
             "type": "Time", 
             "annotations": []
@@ -2279,7 +2279,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1194
+                "line": 1199
             }, 
             "type": "Time", 
             "annotations": []
@@ -2290,7 +2290,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1196
+                "line": 1201
             }, 
             "type": "Case", 
             "annotations": []
@@ -2301,7 +2301,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1198
+                "line": 1203
             }, 
             "type": "Time", 
             "annotations": []
@@ -2312,7 +2312,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1199
+                "line": 1204
             }, 
             "type": "String", 
             "annotations": []
@@ -2323,7 +2323,7 @@
             "references": [], 
             "location": {
                 "column": 57, 
-                "line": 1215
+                "line": 1220
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2334,7 +2334,7 @@
             "references": [], 
             "location": {
                 "column": 74, 
-                "line": 1215
+                "line": 1220
             }, 
             "type": "String", 
             "annotations": []
@@ -2345,7 +2345,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 1219
+                "line": 1224
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2356,7 +2356,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1221
+                "line": 1226
             }, 
             "type": "Set", 
             "annotations": []
@@ -2367,7 +2367,7 @@
             "references": [], 
             "location": {
                 "column": 34, 
-                "line": 1222
+                "line": 1227
             }, 
             "type": "Map", 
             "annotations": []
@@ -2378,7 +2378,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 1224
+                "line": 1229
             }, 
             "type": "Set", 
             "annotations": []
@@ -2389,7 +2389,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 1226
+                "line": 1231
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2400,7 +2400,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 1228
+                "line": 1233
             }, 
             "type": "Set", 
             "annotations": []
@@ -2411,7 +2411,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1229
+                "line": 1234
             }, 
             "type": "Map", 
             "annotations": []
@@ -2422,7 +2422,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1230
+                "line": 1235
             }, 
             "type": "Case", 
             "annotations": []
@@ -2433,7 +2433,7 @@
             "references": [], 
             "location": {
                 "column": 29, 
-                "line": 1240
+                "line": 1245
             }, 
             "type": "Request_Type__c", 
             "annotations": []
@@ -2444,7 +2444,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1249
+                "line": 1254
             }, 
             "type": "String", 
             "annotations": []
@@ -2455,7 +2455,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1255
+                "line": 1260
             }, 
             "type": "String", 
             "annotations": []
@@ -2466,7 +2466,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1256
+                "line": 1261
             }, 
             "type": "Request_Type__c", 
             "annotations": []
@@ -2477,7 +2477,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 1275
+                "line": 1280
             }, 
             "type": "String", 
             "annotations": []
@@ -2488,7 +2488,7 @@
             "references": [], 
             "location": {
                 "column": 19, 
-                "line": 1276
+                "line": 1281
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2499,7 +2499,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1281
+                "line": 1286
             }, 
             "type": "Plan__c", 
             "annotations": []
@@ -2510,7 +2510,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1286
+                "line": 1291
             }, 
             "type": "Case", 
             "annotations": []
@@ -2521,7 +2521,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1337
+                "line": 1342
             }, 
             "type": "String", 
             "annotations": []
@@ -2532,7 +2532,7 @@
             "references": [], 
             "location": {
                 "column": 47, 
-                "line": 1338
+                "line": 1343
             }, 
             "type": "Map", 
             "annotations": []
@@ -2543,7 +2543,7 @@
             "references": [], 
             "location": {
                 "column": 44, 
-                "line": 1342
+                "line": 1347
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2554,7 +2554,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1343
+                "line": 1348
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2565,7 +2565,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1344
+                "line": 1349
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2576,7 +2576,7 @@
             "references": [], 
             "location": {
                 "column": 29, 
-                "line": 1350
+                "line": 1355
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2587,7 +2587,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1351
+                "line": 1356
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2598,7 +2598,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1358
+                "line": 1363
             }, 
             "type": "Case", 
             "annotations": []
@@ -2609,7 +2609,7 @@
             "references": [], 
             "location": {
                 "column": 33, 
-                "line": 1361
+                "line": 1366
             }, 
             "type": "Contact", 
             "annotations": []
@@ -2620,7 +2620,7 @@
             "references": [], 
             "location": {
                 "column": 54, 
-                "line": 1362
+                "line": 1367
             }, 
             "type": "SingleEmailMessage", 
             "annotations": []
@@ -2631,7 +2631,7 @@
             "references": [], 
             "location": {
                 "column": 58, 
-                "line": 1388
+                "line": 1393
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2642,7 +2642,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1389
+                "line": 1394
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2653,7 +2653,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1390
+                "line": 1395
             }, 
             "type": "User", 
             "annotations": []
@@ -2664,7 +2664,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1391
+                "line": 1396
             }, 
             "type": "Contact", 
             "annotations": []
@@ -2675,7 +2675,7 @@
             "references": [], 
             "location": {
                 "column": 53, 
-                "line": 1399
+                "line": 1404
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2686,7 +2686,7 @@
             "references": [], 
             "location": {
                 "column": 63, 
-                "line": 1404
+                "line": 1409
             }, 
             "type": "Set", 
             "annotations": []
@@ -2697,7 +2697,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1405
+                "line": 1410
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2708,7 +2708,7 @@
             "references": [], 
             "location": {
                 "column": 34, 
-                "line": 1408
+                "line": 1413
             }, 
             "type": "SingleEmailMessage", 
             "annotations": []
@@ -2719,7 +2719,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 1411
+                "line": 1416
             }, 
             "type": "String", 
             "annotations": []
@@ -2730,7 +2730,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1414
+                "line": 1419
             }, 
             "type": "String", 
             "annotations": []
@@ -2741,7 +2741,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1417
+                "line": 1422
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2752,7 +2752,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1418
+                "line": 1423
             }, 
             "type": "User", 
             "annotations": []
@@ -2763,7 +2763,7 @@
             "references": [], 
             "location": {
                 "column": 61, 
-                "line": 1545
+                "line": 1550
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2774,7 +2774,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 1546
+                "line": 1551
             }, 
             "type": "Set", 
             "annotations": []
@@ -2785,7 +2785,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 1547
+                "line": 1552
             }, 
             "type": "Map", 
             "annotations": []
@@ -2796,7 +2796,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 1548
+                "line": 1553
             }, 
             "type": "Map", 
             "annotations": []
@@ -2807,7 +2807,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1549
+                "line": 1554
             }, 
             "type": "Case", 
             "annotations": []
@@ -2818,7 +2818,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1553
+                "line": 1558
             }, 
             "type": "Case", 
             "annotations": []
@@ -2829,7 +2829,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1568
+                "line": 1573
             }, 
             "type": "Case", 
             "annotations": []
@@ -2840,7 +2840,7 @@
             "references": [], 
             "location": {
                 "column": 58, 
-                "line": 1582
+                "line": 1587
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2851,7 +2851,7 @@
             "references": [], 
             "location": {
                 "column": 76, 
-                "line": 1582
+                "line": 1587
             }, 
             "type": "String", 
             "annotations": []
@@ -2862,7 +2862,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1584
+                "line": 1589
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2873,7 +2873,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1585
+                "line": 1590
             }, 
             "type": "Case", 
             "annotations": []
@@ -2884,7 +2884,7 @@
             "references": [], 
             "location": {
                 "column": 50, 
-                "line": 1595
+                "line": 1600
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2895,7 +2895,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1597
+                "line": 1602
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2906,7 +2906,7 @@
             "references": [], 
             "location": {
                 "column": 26, 
-                "line": 1600
+                "line": 1605
             }, 
             "type": "IntegrationUserID__c", 
             "annotations": []
@@ -2917,7 +2917,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 1601
+                "line": 1606
             }, 
             "type": "String", 
             "annotations": []
@@ -2928,18 +2928,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1604
-            }, 
-            "type": "Case", 
-            "annotations": []
-        }, 
-        {
-            "modifiers": [], 
-            "name": "caseToUpdate", 
-            "references": [], 
-            "location": {
-                "column": 26, 
-                "line": 1610
+                "line": 1609
             }, 
             "type": "Case", 
             "annotations": []
@@ -2957,11 +2946,22 @@
         }, 
         {
             "modifiers": [], 
+            "name": "caseToUpdate", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 1620
+            }, 
+            "type": "Case", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
             "name": "listCases", 
             "references": [], 
             "location": {
                 "column": 58, 
-                "line": 1630
+                "line": 1635
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2972,7 +2972,7 @@
             "references": [], 
             "location": {
                 "column": 83, 
-                "line": 1630
+                "line": 1635
             }, 
             "type": "Map", 
             "annotations": []
@@ -2983,7 +2983,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1636
+                "line": 1641
             }, 
             "type": "LIST", 
             "annotations": []
@@ -2994,7 +2994,7 @@
             "references": [], 
             "location": {
                 "column": 50, 
-                "line": 1637
+                "line": 1642
             }, 
             "type": "Map", 
             "annotations": []
@@ -3005,7 +3005,7 @@
             "references": [], 
             "location": {
                 "column": 50, 
-                "line": 1639
+                "line": 1644
             }, 
             "type": "Map", 
             "annotations": []
@@ -3016,7 +3016,7 @@
             "references": [], 
             "location": {
                 "column": 15, 
-                "line": 1641
+                "line": 1646
             }, 
             "type": "Set", 
             "annotations": []
@@ -3027,7 +3027,7 @@
             "references": [], 
             "location": {
                 "column": 44, 
-                "line": 1643
+                "line": 1648
             }, 
             "type": "Map", 
             "annotations": []
@@ -3038,7 +3038,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1645
+                "line": 1650
             }, 
             "type": "String", 
             "annotations": []
@@ -3049,7 +3049,7 @@
             "references": [], 
             "location": {
                 "column": 43, 
-                "line": 1650
+                "line": 1655
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3060,7 +3060,7 @@
             "references": [], 
             "location": {
                 "column": 43, 
-                "line": 1658
+                "line": 1663
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3071,7 +3071,7 @@
             "references": [], 
             "location": {
                 "column": 29, 
-                "line": 1665
+                "line": 1670
             }, 
             "type": "Map", 
             "annotations": []
@@ -3082,7 +3082,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1666
+                "line": 1671
             }, 
             "type": "Map", 
             "annotations": []
@@ -3093,7 +3093,7 @@
             "references": [], 
             "location": {
                 "column": 19, 
-                "line": 1667
+                "line": 1672
             }, 
             "type": "Set", 
             "annotations": []
@@ -3104,7 +3104,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1668
+                "line": 1673
             }, 
             "type": "Case", 
             "annotations": []
@@ -3115,7 +3115,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1670
+                "line": 1675
             }, 
             "type": "String", 
             "annotations": []
@@ -3126,7 +3126,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1676
+                "line": 1681
             }, 
             "type": "String", 
             "annotations": []
@@ -3137,7 +3137,7 @@
             "references": [], 
             "location": {
                 "column": 45, 
-                "line": 1679
+                "line": 1684
             }, 
             "type": "PlanUserSharingRules__c", 
             "annotations": []
@@ -3148,7 +3148,7 @@
             "references": [], 
             "location": {
                 "column": 44, 
-                "line": 1688
+                "line": 1693
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3159,7 +3159,7 @@
             "references": [], 
             "location": {
                 "column": 40, 
-                "line": 1701
+                "line": 1706
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3170,7 +3170,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1712
+                "line": 1717
             }, 
             "type": "String", 
             "annotations": []
@@ -3181,7 +3181,7 @@
             "references": [], 
             "location": {
                 "column": 45, 
-                "line": 1715
+                "line": 1720
             }, 
             "type": "PlanUserSharingRules__c", 
             "annotations": []
@@ -3192,7 +3192,7 @@
             "references": [], 
             "location": {
                 "column": 44, 
-                "line": 1724
+                "line": 1729
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3203,7 +3203,7 @@
             "references": [], 
             "location": {
                 "column": 40, 
-                "line": 1735
+                "line": 1740
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3214,7 +3214,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1751
+                "line": 1756
             }, 
             "type": "Map", 
             "annotations": []
@@ -3225,7 +3225,7 @@
             "references": [], 
             "location": {
                 "column": 15, 
-                "line": 1752
+                "line": 1757
             }, 
             "type": "Set", 
             "annotations": []
@@ -3236,7 +3236,7 @@
             "references": [], 
             "location": {
                 "column": 19, 
-                "line": 1753
+                "line": 1758
             }, 
             "type": "Map", 
             "annotations": []
@@ -3247,7 +3247,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1755
+                "line": 1760
             }, 
             "type": "UserRole", 
             "annotations": []
@@ -3258,7 +3258,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1763
+                "line": 1768
             }, 
             "type": "Group", 
             "annotations": []
@@ -3269,7 +3269,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1768
+                "line": 1773
             }, 
             "type": "Id", 
             "annotations": []
@@ -3280,7 +3280,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1769
+                "line": 1774
             }, 
             "type": "String", 
             "annotations": []
@@ -3291,7 +3291,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1774
+                "line": 1779
             }, 
             "type": "String", 
             "annotations": []
@@ -3302,7 +3302,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1780
+                "line": 1785
             }, 
             "type": "CaseShare", 
             "annotations": []
@@ -3313,7 +3313,7 @@
             "references": [], 
             "location": {
                 "column": 60, 
-                "line": 1796
+                "line": 1801
             }, 
             "type": "Set", 
             "annotations": []
@@ -3324,7 +3324,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1797
+                "line": 1802
             }, 
             "type": "Map", 
             "annotations": []
@@ -3335,7 +3335,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1798
+                "line": 1803
             }, 
             "type": "Case", 
             "annotations": []
@@ -3346,7 +3346,7 @@
             "references": [], 
             "location": {
                 "column": 59, 
-                "line": 1806
+                "line": 1811
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3357,7 +3357,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 1807
+                "line": 1812
             }, 
             "type": "Set", 
             "annotations": []
@@ -3368,7 +3368,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1808
+                "line": 1813
             }, 
             "type": "Case", 
             "annotations": []
@@ -3379,7 +3379,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1811
+                "line": 1816
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3390,7 +3390,7 @@
             "references": [], 
             "location": {
                 "column": 59, 
-                "line": 1819
+                "line": 1824
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3401,7 +3401,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1820
+                "line": 1825
             }, 
             "type": "Case", 
             "annotations": []
@@ -3412,7 +3412,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1821
+                "line": 1826
             }, 
             "type": "String", 
             "annotations": []
@@ -3423,7 +3423,7 @@
             "references": [], 
             "location": {
                 "column": 54, 
-                "line": 1836
+                "line": 1841
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3434,7 +3434,7 @@
             "references": [], 
             "location": {
                 "column": 10, 
-                "line": 1837
+                "line": 1842
             }, 
             "type": "User", 
             "annotations": []
@@ -3445,7 +3445,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1838
+                "line": 1843
             }, 
             "type": "Case", 
             "annotations": []
@@ -3456,7 +3456,7 @@
             "references": [], 
             "location": {
                 "column": 59, 
-                "line": 1878
+                "line": 1883
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3467,7 +3467,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1881
+                "line": 1886
             }, 
             "type": "CaseComment", 
             "annotations": []
@@ -3478,7 +3478,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1887
+                "line": 1892
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3489,7 +3489,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1888
+                "line": 1893
             }, 
             "type": "String", 
             "annotations": []
@@ -3500,7 +3500,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1889
+                "line": 1894
             }, 
             "type": "String", 
             "annotations": []
@@ -3511,7 +3511,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1911
+                "line": 1916
             }, 
             "type": "String", 
             "annotations": []
@@ -3522,7 +3522,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1912
+                "line": 1917
             }, 
             "type": "String", 
             "annotations": []
@@ -3533,7 +3533,7 @@
             "references": [], 
             "location": {
                 "column": 53, 
-                "line": 1926
+                "line": 1931
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3544,7 +3544,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 1927
+                "line": 1932
             }, 
             "type": "Integer", 
             "annotations": []
@@ -3555,7 +3555,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 1929
+                "line": 1934
             }, 
             "type": "Case", 
             "annotations": []
@@ -3566,7 +3566,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1933
+                "line": 1938
             }, 
             "type": "Integer", 
             "annotations": []
@@ -3577,7 +3577,7 @@
             "references": [], 
             "location": {
                 "column": 45, 
-                "line": 1973
+                "line": 1978
             }, 
             "type": "String", 
             "annotations": []
@@ -3588,7 +3588,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 1975
+                "line": 1980
             }, 
             "type": "String", 
             "annotations": []
@@ -3599,7 +3599,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 1978
+                "line": 1983
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3610,7 +3610,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 1979
+                "line": 1984
             }, 
             "type": "String", 
             "annotations": []
@@ -3621,7 +3621,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 1982
+                "line": 1987
             }, 
             "type": "String", 
             "annotations": []
@@ -3632,7 +3632,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 2003
+                "line": 2008
             }, 
             "type": "String", 
             "annotations": []
@@ -3643,7 +3643,7 @@
             "references": [], 
             "location": {
                 "column": 62, 
-                "line": 2077
+                "line": 2082
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3654,7 +3654,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2078
+                "line": 2083
             }, 
             "type": "Integer", 
             "annotations": []
@@ -3665,7 +3665,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2079
+                "line": 2084
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -3676,7 +3676,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 2081
+                "line": 2086
             }, 
             "type": "CaseComment", 
             "annotations": []
@@ -3687,7 +3687,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 2085
+                "line": 2090
             }, 
             "type": "Integer", 
             "annotations": []
@@ -3698,7 +3698,7 @@
             "references": [], 
             "location": {
                 "column": 49, 
-                "line": 2100
+                "line": 2105
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3709,7 +3709,7 @@
             "references": [], 
             "location": {
                 "column": 74, 
-                "line": 2100
+                "line": 2105
             }, 
             "type": "Map", 
             "annotations": []
@@ -3720,7 +3720,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2101
+                "line": 2106
             }, 
             "type": "Set", 
             "annotations": []
@@ -3731,7 +3731,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2102
+                "line": 2107
             }, 
             "type": "Map", 
             "annotations": []
@@ -3742,7 +3742,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 2103
+                "line": 2108
             }, 
             "type": "String", 
             "annotations": []
@@ -3753,7 +3753,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2104
+                "line": 2109
             }, 
             "type": "Case", 
             "annotations": []
@@ -3764,7 +3764,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2105
+                "line": 2110
             }, 
             "type": "String", 
             "annotations": []
@@ -3775,7 +3775,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2112
+                "line": 2117
             }, 
             "type": "User", 
             "annotations": []
@@ -3786,7 +3786,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2124
+                "line": 2129
             }, 
             "type": "Case", 
             "annotations": []
@@ -3797,7 +3797,7 @@
             "references": [], 
             "location": {
                 "column": 57, 
-                "line": 2173
+                "line": 2178
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3808,7 +3808,7 @@
             "references": [], 
             "location": {
                 "column": 82, 
-                "line": 2173
+                "line": 2178
             }, 
             "type": "Map", 
             "annotations": []
@@ -3819,7 +3819,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 2174
+                "line": 2179
             }, 
             "type": "String", 
             "annotations": []
@@ -3830,7 +3830,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2175
+                "line": 2180
             }, 
             "type": "Set", 
             "annotations": []
@@ -3841,7 +3841,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2176
+                "line": 2181
             }, 
             "type": "Set", 
             "annotations": []
@@ -3852,7 +3852,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2177
+                "line": 2182
             }, 
             "type": "Set", 
             "annotations": []
@@ -3863,7 +3863,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2178
+                "line": 2183
             }, 
             "type": "Map", 
             "annotations": []
@@ -3874,7 +3874,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2180
+                "line": 2185
             }, 
             "type": "Map", 
             "annotations": []
@@ -3885,7 +3885,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2187
+                "line": 2192
             }, 
             "type": "Case", 
             "annotations": []
@@ -3896,7 +3896,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2188
+                "line": 2193
             }, 
             "type": "String", 
             "annotations": []
@@ -3907,7 +3907,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2197
+                "line": 2202
             }, 
             "type": "QueueSobject", 
             "annotations": []
@@ -3918,7 +3918,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2202
+                "line": 2207
             }, 
             "type": "Plan__c", 
             "annotations": []
@@ -3929,7 +3929,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2210
+                "line": 2215
             }, 
             "type": "Case", 
             "annotations": []
@@ -3940,7 +3940,7 @@
             "references": [], 
             "location": {
                 "column": 62, 
-                "line": 2242
+                "line": 2247
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3951,7 +3951,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2243
+                "line": 2248
             }, 
             "type": "LIST", 
             "annotations": []
@@ -3962,7 +3962,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2244
+                "line": 2249
             }, 
             "type": "Map", 
             "annotations": []
@@ -3973,7 +3973,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2247
+                "line": 2252
             }, 
             "type": "Set", 
             "annotations": []
@@ -3984,7 +3984,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2248
+                "line": 2253
             }, 
             "type": "Case", 
             "annotations": []
@@ -3995,7 +3995,7 @@
             "references": [], 
             "location": {
                 "column": 33, 
-                "line": 2252
+                "line": 2257
             }, 
             "type": "PermissionSetAssignment", 
             "annotations": []
@@ -4006,7 +4006,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2261
+                "line": 2266
             }, 
             "type": "Case", 
             "annotations": []
@@ -4017,7 +4017,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 2264
+                "line": 2269
             }, 
             "type": "String", 
             "annotations": []
@@ -4028,7 +4028,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2269
+                "line": 2274
             }, 
             "type": "CaseShare", 
             "annotations": []
@@ -4039,7 +4039,7 @@
             "references": [], 
             "location": {
                 "column": 55, 
-                "line": 2283
+                "line": 2288
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4050,7 +4050,7 @@
             "references": [], 
             "location": {
                 "column": 80, 
-                "line": 2283
+                "line": 2288
             }, 
             "type": "Map", 
             "annotations": []
@@ -4061,7 +4061,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2284
+                "line": 2289
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4072,7 +4072,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2285
+                "line": 2290
             }, 
             "type": "Set", 
             "annotations": []
@@ -4083,7 +4083,7 @@
             "references": [], 
             "location": {
                 "column": 13, 
-                "line": 2286
+                "line": 2291
             }, 
             "type": "Set", 
             "annotations": []
@@ -4094,7 +4094,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2288
+                "line": 2293
             }, 
             "type": "Case", 
             "annotations": []
@@ -4105,7 +4105,7 @@
             "references": [], 
             "location": {
                 "column": 19, 
-                "line": 2294
+                "line": 2299
             }, 
             "type": "CaseShare", 
             "annotations": []
@@ -4116,7 +4116,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 2298
+                "line": 2303
             }, 
             "type": "Case", 
             "annotations": []
@@ -4127,7 +4127,7 @@
             "references": [], 
             "location": {
                 "column": 60, 
-                "line": 2311
+                "line": 2316
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4138,7 +4138,7 @@
             "references": [], 
             "location": {
                 "column": 85, 
-                "line": 2311
+                "line": 2316
             }, 
             "type": "Map", 
             "annotations": []
@@ -4149,7 +4149,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 2312
+                "line": 2317
             }, 
             "type": "String", 
             "annotations": []
@@ -4160,7 +4160,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2313
+                "line": 2318
             }, 
             "type": "Case", 
             "annotations": []
@@ -4171,7 +4171,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 2316
+                "line": 2321
             }, 
             "type": "String", 
             "annotations": []
@@ -4182,7 +4182,7 @@
             "references": [], 
             "location": {
                 "column": 16, 
-                "line": 2319
+                "line": 2324
             }, 
             "type": "String", 
             "annotations": []
@@ -4193,7 +4193,7 @@
             "references": [], 
             "location": {
                 "column": 64, 
-                "line": 2337
+                "line": 2342
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4204,7 +4204,7 @@
             "references": [], 
             "location": {
                 "column": 66, 
-                "line": 2338
+                "line": 2343
             }, 
             "type": "Map", 
             "annotations": []
@@ -4215,7 +4215,7 @@
             "references": [], 
             "location": {
                 "column": 59, 
-                "line": 2339
+                "line": 2344
             }, 
             "type": "String", 
             "annotations": []
@@ -4226,7 +4226,7 @@
             "references": [], 
             "location": {
                 "column": 19, 
-                "line": 2341
+                "line": 2346
             }, 
             "type": "Map", 
             "annotations": []
@@ -4237,7 +4237,7 @@
             "references": [], 
             "location": {
                 "column": 8, 
-                "line": 2342
+                "line": 2347
             }, 
             "type": "Id", 
             "annotations": []
@@ -4248,7 +4248,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2344
+                "line": 2349
             }, 
             "type": "User", 
             "annotations": []
@@ -4259,7 +4259,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2349
+                "line": 2354
             }, 
             "type": "Case", 
             "annotations": []
@@ -4270,7 +4270,7 @@
             "references": [], 
             "location": {
                 "column": 49, 
-                "line": 2359
+                "line": 2364
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4281,7 +4281,7 @@
             "references": [], 
             "location": {
                 "column": 66, 
-                "line": 2359
+                "line": 2364
             }, 
             "type": "String", 
             "annotations": []
@@ -4292,7 +4292,7 @@
             "references": [], 
             "location": {
                 "column": 12, 
-                "line": 2361
+                "line": 2366
             }, 
             "type": "Id", 
             "annotations": []
@@ -4303,7 +4303,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 2363
+                "line": 2368
             }, 
             "type": "String", 
             "annotations": []
@@ -4314,7 +4314,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 2368
+                "line": 2373
             }, 
             "type": "Case", 
             "annotations": []
@@ -4325,7 +4325,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 2369
+                "line": 2374
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -4336,7 +4336,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 2371
+                "line": 2376
             }, 
             "type": "Datetime", 
             "annotations": []
@@ -4347,7 +4347,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2372
+                "line": 2377
             }, 
             "type": "String", 
             "annotations": []
@@ -4358,7 +4358,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2383
+                "line": 2388
             }, 
             "type": "String", 
             "annotations": []
@@ -4369,7 +4369,7 @@
             "references": [], 
             "location": {
                 "column": 55, 
-                "line": 2391
+                "line": 2396
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4380,7 +4380,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 2392
+                "line": 2397
             }, 
             "type": "Case", 
             "annotations": []
@@ -4391,7 +4391,7 @@
             "references": [], 
             "location": {
                 "column": 54, 
-                "line": 2403
+                "line": 2408
             }, 
             "type": "String", 
             "annotations": []
@@ -4402,7 +4402,7 @@
             "references": [], 
             "location": {
                 "column": 52, 
-                "line": 2410
+                "line": 2415
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4413,7 +4413,7 @@
             "references": [], 
             "location": {
                 "column": 69, 
-                "line": 2410
+                "line": 2415
             }, 
             "type": "String", 
             "annotations": []
@@ -4424,7 +4424,7 @@
             "references": [], 
             "location": {
                 "column": 18, 
-                "line": 2413
+                "line": 2418
             }, 
             "type": "Case", 
             "annotations": []
@@ -4435,7 +4435,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2415
+                "line": 2420
             }, 
             "type": "String", 
             "annotations": []
@@ -4446,7 +4446,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2416
+                "line": 2421
             }, 
             "type": "String", 
             "annotations": []
@@ -4457,7 +4457,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 2417
+                "line": 2422
             }, 
             "type": "String", 
             "annotations": []
@@ -4468,7 +4468,7 @@
             "references": [], 
             "location": {
                 "column": 28, 
-                "line": 2422
+                "line": 2427
             }, 
             "type": "String", 
             "annotations": []
@@ -4479,7 +4479,7 @@
             "references": [], 
             "location": {
                 "column": 32, 
-                "line": 2423
+                "line": 2428
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4490,7 +4490,7 @@
             "references": [], 
             "location": {
                 "column": 26, 
-                "line": 2424
+                "line": 2429
             }, 
             "type": "Case", 
             "annotations": []
@@ -4501,7 +4501,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 2432
+                "line": 2437
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -4512,7 +4512,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 2433
+                "line": 2438
             }, 
             "type": "Integer", 
             "annotations": []
@@ -4523,7 +4523,7 @@
             "references": [], 
             "location": {
                 "column": 20, 
-                "line": 2441
+                "line": 2446
             }, 
             "type": "Id", 
             "annotations": []
@@ -4534,7 +4534,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2443
+                "line": 2448
             }, 
             "type": "String", 
             "annotations": []
@@ -4545,7 +4545,7 @@
             "references": [], 
             "location": {
                 "column": 62, 
-                "line": 2465
+                "line": 2470
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4556,7 +4556,7 @@
             "references": [], 
             "location": {
                 "column": 79, 
-                "line": 2465
+                "line": 2470
             }, 
             "type": "String", 
             "annotations": []
@@ -4567,7 +4567,7 @@
             "references": [], 
             "location": {
                 "column": 17, 
-                "line": 2467
+                "line": 2472
             }, 
             "type": "Case", 
             "annotations": []
@@ -4578,7 +4578,7 @@
             "references": [], 
             "location": {
                 "column": 52, 
-                "line": 2475
+                "line": 2480
             }, 
             "type": "LIST", 
             "annotations": []
@@ -4589,7 +4589,7 @@
             "references": [], 
             "location": {
                 "column": 69, 
-                "line": 2475
+                "line": 2480
             }, 
             "type": "String", 
             "annotations": []
@@ -4600,7 +4600,7 @@
             "references": [], 
             "location": {
                 "column": 14, 
-                "line": 2476
+                "line": 2481
             }, 
             "type": "Case", 
             "annotations": []
@@ -4611,7 +4611,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2478
+                "line": 2483
             }, 
             "type": "String", 
             "annotations": []
@@ -4622,7 +4622,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2479
+                "line": 2484
             }, 
             "type": "String", 
             "annotations": []
@@ -4633,7 +4633,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2480
+                "line": 2485
             }, 
             "type": "String", 
             "annotations": []
@@ -4644,7 +4644,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 2481
+                "line": 2486
             }, 
             "type": "Boolean", 
             "annotations": []
@@ -4655,7 +4655,7 @@
             "references": [], 
             "location": {
                 "column": 25, 
-                "line": 2484
+                "line": 2489
             }, 
             "type": "String", 
             "annotations": []
@@ -4666,7 +4666,62 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 2498
+                "line": 2503
+            }, 
+            "type": "String", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
+            "name": "listCases", 
+            "references": [], 
+            "location": {
+                "column": 64, 
+                "line": 2525
+            }, 
+            "type": "LIST", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
+            "name": "operation", 
+            "references": [], 
+            "location": {
+                "column": 81, 
+                "line": 2525
+            }, 
+            "type": "String", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
+            "name": "objCase", 
+            "references": [], 
+            "location": {
+                "column": 14, 
+                "line": 2526
+            }, 
+            "type": "Case", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
+            "name": "ownerType", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2530
+            }, 
+            "type": "String", 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [], 
+            "name": "ownerId", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 2531
             }, 
             "type": "String", 
             "annotations": []
@@ -5000,7 +5055,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1022
+                "line": 1027
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5021,7 +5076,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1065
+                "line": 1070
             }, 
             "returnType": "String", 
             "type": null, 
@@ -5046,7 +5101,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1078
+                "line": 1083
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5062,7 +5117,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 1166
+                "line": 1171
             }, 
             "returnType": "Boolean", 
             "type": null, 
@@ -5087,7 +5142,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1186
+                "line": 1191
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5112,7 +5167,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1215
+                "line": 1220
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5128,7 +5183,7 @@
             "references": [], 
             "location": {
                 "column": 28, 
-                "line": 1335
+                "line": 1340
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5149,7 +5204,7 @@
             "references": [], 
             "location": {
                 "column": 33, 
-                "line": 1388
+                "line": 1393
             }, 
             "returnType": "LIST", 
             "type": null, 
@@ -5170,7 +5225,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 1399
+                "line": 1404
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5191,7 +5246,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1404
+                "line": 1409
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5212,7 +5267,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1545
+                "line": 1550
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5237,7 +5292,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1582
+                "line": 1587
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5258,7 +5313,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1595
+                "line": 1600
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5283,7 +5338,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1630
+                "line": 1635
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5304,7 +5359,7 @@
             "references": [], 
             "location": {
                 "column": 35, 
-                "line": 1796
+                "line": 1801
             }, 
             "returnType": "Map", 
             "type": null, 
@@ -5325,7 +5380,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 1806
+                "line": 1811
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5346,7 +5401,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1819
+                "line": 1824
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5367,7 +5422,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1836
+                "line": 1841
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5388,7 +5443,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 1878
+                "line": 1883
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5409,7 +5464,7 @@
             "references": [], 
             "location": {
                 "column": 21, 
-                "line": 1926
+                "line": 1931
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5430,7 +5485,7 @@
             "references": [], 
             "location": {
                 "column": 26, 
-                "line": 1973
+                "line": 1978
             }, 
             "returnType": "String", 
             "type": null, 
@@ -5451,7 +5506,7 @@
             "references": [], 
             "location": {
                 "column": 23, 
-                "line": 2077
+                "line": 2082
             }, 
             "returnType": "Boolean", 
             "type": null, 
@@ -5476,7 +5531,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2100
+                "line": 2105
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5501,7 +5556,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2173
+                "line": 2178
             }, 
             "returnType": "String", 
             "type": null, 
@@ -5522,7 +5577,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2242
+                "line": 2247
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5547,7 +5602,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2283
+                "line": 2288
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5572,7 +5627,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2311
+                "line": 2316
             }, 
             "returnType": "String", 
             "type": null, 
@@ -5601,7 +5656,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2337
+                "line": 2342
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5626,7 +5681,7 @@
             "references": [], 
             "location": {
                 "column": 22, 
-                "line": 2359
+                "line": 2364
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5647,7 +5702,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2391
+                "line": 2396
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5668,7 +5723,7 @@
             "references": [], 
             "location": {
                 "column": 27, 
-                "line": 2403
+                "line": 2408
             }, 
             "returnType": "String", 
             "type": null, 
@@ -5693,7 +5748,7 @@
             "references": [], 
             "location": {
                 "column": 24, 
-                "line": 2410
+                "line": 2415
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5718,7 +5773,7 @@
             "references": [], 
             "location": {
                 "column": 30, 
-                "line": 2465
+                "line": 2470
             }, 
             "returnType": "void", 
             "type": null, 
@@ -5743,7 +5798,32 @@
             "references": [], 
             "location": {
                 "column": 26, 
-                "line": 2475
+                "line": 2480
+            }, 
+            "returnType": "void", 
+            "type": null, 
+            "annotations": []
+        }, 
+        {
+            "modifiers": [
+                "static", 
+                "public"
+            ], 
+            "name": "caseOwnerChangeHistoryCases", 
+            "parameters": [
+                {
+                    "type": "LIST", 
+                    "name": "listCases"
+                }, 
+                {
+                    "type": "String", 
+                    "name": "operation"
+                }
+            ], 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 2525
             }, 
             "returnType": "void", 
             "type": null, 
